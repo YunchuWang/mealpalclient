@@ -1,4 +1,6 @@
 Client app for meal pal
+Download and run "npm install" to install all dependencies needed for this project.
+To run this app: "npm start"
 --------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

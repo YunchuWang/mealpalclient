@@ -118,7 +118,6 @@ module.exports = {
       // Process JS with Babel.
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
         include: paths.appSrc,
         loader: 'babel',
         query: {

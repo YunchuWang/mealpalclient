@@ -1,35 +1,12 @@
-import React from 'react';
+import React,{PropTypes} from 'react';
 import '../css/style.css';
 import '../css/bootstrap-theme.css';
 import '../css/bootstrap.css';
 import '../css/bootstrap.min.css';
-import axios from 'axios';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import profile from '../img/profile.jpg';
 
 class DevNavbar extends React.Component {
-   constructor(props, context) {
-    super(props, context);
-        this.handleClick = this.handleClick.bind(this);
-    };
-    handleClick(event) {
-       event.preventDefault();
-       axios.post('http://139.59.16.82:3000/logout', {
-            token: window.session
-          })
-          .then(function(response) {
-             console.log(response);
-             this.setState({success:response.data.success});
-             if(this.state.success === true) {
-                 this.context.router.push('/');
-             }
-             console.log(window);
-          }.bind(this))
-          .catch(function (error) {
-            console.log(error);
-          }
-      );
-   };
    render() {
       return (
           <div className='navbarStyle'>
@@ -78,7 +55,7 @@ appicon"></span>MealPal</a></li>
                       <a className="dropdown-item" href="#">Friends</a>
                       <div className="dropdown-divider"></div>
                       <a className="dropdown-item" href="#">Account settings</a>
-                      <a className="dropdown-item" href="#" onClick={this.handleClick}>Log out</a>
+                      <a className="dropdown-item" href="#" onClick={this.props.handleLogout}>Log out</a>
                     </ul>
                   </li>
               </ul>
@@ -87,7 +64,8 @@ appicon"></span>MealPal</a></li>
    }
 }
 
-DevNavbar.contextTypes = {
-    router: React.PropTypes.object.isRequired
-};
+
+DevNavbar.propTypes = {
+    handleLogout : React.PropTypes.func.isRequired
+}
 export default DevNavbar;

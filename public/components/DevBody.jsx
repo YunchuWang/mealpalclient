@@ -1,7 +1,7 @@
 import React from 'react';
 import DevBodyMainNav from './DevBodyMainNav.jsx';
 import DevBodySubNav from './DevBodySubNav.jsx';
-import DevBodyGrids from './DevBodyGrids.jsx';
+import DevBodyWall from './DevBodyWall.jsx';
 
 var devbodyStyle = {
     minWidth: '1020px',
@@ -18,18 +18,13 @@ var devbodyStyle = {
 };
 
 
+const DevBody = (props) => (
+    <div style={devbodyStyle}>
+        <DevBodyMainNav {...props}></DevBodyMainNav>
+        <DevBodySubNav></DevBodySubNav>
+        <DevBodyWall {...props}></DevBodyWall>
+    </div>
+)
 
-class DevBody extends React.Component {
-
-    render() {
-        return (
-            <div style={devbodyStyle}>
-                <DevBodyMainNav ></DevBodyMainNav>
-                <DevBodySubNav></DevBodySubNav>
-                <DevBodyGrids ></DevBodyGrids>
-            </div>
-        );
-    }
-}
 
 export default DevBody;

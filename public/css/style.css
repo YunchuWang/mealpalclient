@@ -27,11 +27,11 @@ html,body{
     bottom: 0px;
     left:0;
     color:white;
-    
+
     border-top: 1px solid #C0C0C0;
 }
 .DevContainer {
-    
+
 }
 .breadcrumb li i{
     padding-right: 30px;
@@ -93,7 +93,7 @@ html,body{
     padding: 8px;
     overflow: auto !important;
     height: 2794px;
-    
+
 }
 .whitegrid {
 /*    background-color: white;*/
@@ -155,9 +155,9 @@ html,body{
     padding-left: 0px !important;
     margin:0px !important;
     color: white;
-    position: absolute;               
-    top: 50%;                         
-    transform: translate(0, -50%); 
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 .category-content .media .media-right i:hover {
     color: darkgrey;
@@ -172,25 +172,27 @@ html,body{
     font-weight: 500;
 }
 
-.sidebar-nav > li {
+.sidebar-nav > li,.sidebar-nav >div> li {
     display: inline-block;
     width: 100%;
     height: 44px;
 }
+
 .sidebar-nav .sideheader {
-    position: relative; 
+    position: relative;
     height: 42px !important;
     width: 100%;
     padding: 11px 20px;
 }
 
-.sidebar-nav > li:not(:nth-child(2)) a{
+.sidebar-nav > li:not(:nth-child(2)) a,.sidebar-nav > div>li:not(:nth-child(2)) a{
     display: block;
     color: #ddd;
     text-decoration: none;
-    padding: 10px 20px 10px 20px;  
+    padding: 10px 20px 10px 20px;
     transition: background-color 0.8s ease;
 }
+
 .sidebar-nav .sideheader span {
     font-size: 12px;
     display: block;
@@ -199,25 +201,25 @@ html,body{
     color: #92989B;
     font-weight: 500;
 }
-.sidebar-nav > li:nth-child(2) a{
+.sidebar-nav > li:nth-child(2) a,.sidebar-nav >div> li:nth-child(2) a{
     display: block;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    padding: 0px 20px; 
+    padding: 0px 20px;
     transition: background-color 0.8s ease;
     height: 44px;
     line-height: 44px;
     white-space: nowrap;
-    
+
 }
 
-.sidebar-nav > li:not(:nth-child(2)) a:hover{
+.sidebar-nav > li:not(:nth-child(2)) a:hover,.sidebar-nav >div> li:not(:nth-child(2)) a:hover{
     color: #fff;
     text-decoration: none;
     background-color:#1e282c;
 }
-.sidebar-nav > li:not(:nth-child(2)) a::after {
+.sidebar-nav > li:not(:nth-child(2)) a::after,.sidebar-nav>div> li:not(:nth-child(2)) a::after {
     content: ">";
     float: right;
 }
@@ -228,28 +230,28 @@ html,body{
     color: #fff;
 }
 
-#test {
+.sidebar-nav>div>div>ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-#test > li {
+.sidebar-nav>div>div>ul>li{
     display: inline-block;
     width: 100%;
     height: 44px;
     color: #ddd;
-    text-decoration: none;  
+    text-decoration: none;
     transition: background-color 0.8s ease;
-    
-} 
-#test > li a {
+
+}
+.sidebar-nav>div>div>ul>li a {
     display: block;
     color: #ddd;
     text-decoration: none;
     padding: 10px 20px 10px 20px;
     transition: background-color 0.8s ease;
 }
-#test > li a:hover{
+.sidebar-nav>div>div>ul>li a:hover{
     color: #fff;
     text-decoration: none;
     background-color:#1e282c;
@@ -286,7 +288,7 @@ html,body{
 .navbar > li:first-child + li + li {
     margin-right: 10px !important;
     position:relative;
-    
+
 }
 .navbar > li:nth-child(5) > a {
     padding-left: 20px !important;
@@ -299,7 +301,7 @@ html,body{
 }
 .navbar > li:nth-child(6) > a {
     padding-left: 15px !important;
-    padding-right: 15px !important; 
+    padding-right: 15px !important;
     position:relative;
 }
 .navbar > li:nth-child(7) > a {
@@ -333,10 +335,10 @@ html,body{
 .navbar > div span {
     font-weight: 100;
     padding: 7px 5px;
-    position: absolute;               
-    top: 45%;                         
-    transform: translate(0, -50%); 
-    
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -50%);
+
 }
 .dropdown > ul {
     margin: 0px !important;
@@ -381,7 +383,7 @@ html,body{
     top: 50%;
     transform: translateY(-50%);
     letter-spacing: 1px;
-    
+
 }
 .navbar > li:not(:first-child):not(:last-child)>a {
     display: block;
@@ -495,12 +497,12 @@ html,body{
 
 button,
 button:active,
-button:focus, 
+button:focus,
 button:hover,
 .btn,
-.btn:active, 
-.btn:focus, 
-.btn:hover{   
+.btn:active,
+.btn:focus,
+.btn:hover{
     border:none !important;
     outline: 0 !important;
 }
@@ -591,7 +593,7 @@ button:hover,
 
 .modal-footer .input-group {
     padding: 0px !important;
-    
+
     margin-bottom: 12px !important;
     width: 130px !important;
     clear: both !important;
@@ -667,7 +669,7 @@ button:hover,
 }
 .modal-footer .input-group {
    margin-left: 60%;
-   
+
 }
 .modal-footer {
     border: none !important;

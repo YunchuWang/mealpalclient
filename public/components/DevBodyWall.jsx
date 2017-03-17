@@ -22,7 +22,6 @@ class DevBodyWall extends React.PureComponent {
         };
         this.addRequest = this.addRequest.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.update = this.update.bind(this);
         this.close = this.close.bind(this);
         this.open = this.open.bind(this);
     };
@@ -35,39 +34,8 @@ class DevBodyWall extends React.PureComponent {
     open() {
         this.props.actions.showWriteRequest();
     };
-    update() {
-        // axios.get('http://139.59.16.82:3000/listings/90')
-        //     .then(function(response) {
-        //
-        //         console.log(response.data);
-        //         dbarr = response.data;
-        //         console.log("from listing");
-        //         console.log(dbarr);
-        //         var newarr = [];
-        //         for(var i = 0; i < dbarr.length; i++) {
-        //             newarr.push({
-        //                 key: Date(),
-        //                 description: dbarr[i].message,
-        //                 availtime:  dbarr[i].time,
-        //                 location:  dbarr[i].location,
-        //                 schoolyear:  dbarr[i].schoolyear,
-        //                 userid:  dbarr[i].email,
-        //                 allergy:  dbarr[i].allergies,
-        //                 hobby:  dbarr[i].hobbies
-        //             })
-        //         }
-        //         this.setState({
-        //             requests: newarr
-        //         });
-        //
-        //     }.bind(this))
-        //     .catch(function (error) {
-        //             // console.log(response);
-        //         }
-        //     );
-    };
+
     handleChange(event) {
-        // console.log("pass");
         switch(event.target.id) {
             case 'availtime':
                 this.setState({avvalue: event.target.value});
@@ -92,7 +60,6 @@ class DevBodyWall extends React.PureComponent {
             dvalue: '',
             avvalue:'',
             lvalue:''
-            // reqcount: this.state.reqcount + 1
         }) ;
         e.preventDefault();
         this.props.actions.hideWriteRequest();

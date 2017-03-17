@@ -4,19 +4,26 @@
 import { ADD_REQUEST, DELETE_REQUEST } from '../constants/ActionTypes'
 import axios from 'axios';
 
+axios.get('http://localhost:3002/post').then(function (response) {
+    console.log(response);
+}).catch(function (error) {
+    console.log(error);
+});
 
 
 export default function mealrequests(state = {count:0,mealrequests:[]}, action) {
     switch (action.type) {
         case ADD_REQUEST:
-            // var jsoned = JSON.stringify(action.mealRequest);
-            // axios.post('http://139.59.16.82:3000/create',jsoned)
-            //     .then(function(response) {
-            //        console.log(response.data.success);
-            //     }.bind(this))
-            //     .catch(function (error) {
-            //     }
-            // );
+            axios.post('http://localhost:3002/post',action.mealRequest).then(function(res){
+                console.log(res);
+            }).catch(function (error) {
+                console.log(error);
+            });
+            axios.post('https://onyen.unc.edu/cgi-bin/unc_id/authenticator.pl').then(function(res){
+                console.log(res);
+            }).catch(function (error) {
+                console.log(error);
+            });
             if(state.count !== 0  && state.mealrequests[0].length < 3) {
                 state.mealrequests[0].unshift(
                     action.mealRequest

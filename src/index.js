@@ -33,9 +33,9 @@ let store = finalCreateStore(rootReducer)
 //     username: 'asd',
 //     password: 'nininini'
 // })
-setInterval(()=>{
-    console.log(store.getState());
-},10000)
+// setInterval(()=>{
+//     console.log(store.getState());
+// },10000)
 
 // store.dispatch({
 //     type : ActionTypes.SIGN_UP,

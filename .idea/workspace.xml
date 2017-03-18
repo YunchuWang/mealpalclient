@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf944c59-ae1a-4ad0-8c8f-4dd697a255d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/containers/DevMain.jsx" afterPath="$PROJECT_DIR$/public/containers/DevMain.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/containers/DevSigninform.jsx" afterPath="$PROJECT_DIR$/public/containers/DevSigninform.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/containers/DevSignuppage.jsx" afterPath="$PROJECT_DIR$/public/containers/DevSignuppage.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/reducers/mealrequests.js" afterPath="$PROJECT_DIR$/public/reducers/mealrequests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/reducers/useracount.js" afterPath="$PROJECT_DIR$/public/reducers/useracount.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mealrequests.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mealrequests.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/reducers/mealrequests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="240">
+              <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#41#111#0" expanded="true" />
@@ -63,8 +60,8 @@
       <file leaf-file-name="DevSignuppage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/containers/DevSignuppage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+            <state relative-caret-position="705">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -82,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DevSigninform.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DevSigninform.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/containers/DevSigninform.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="34" column="60" lean-forward="false" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -231,11 +228,11 @@
         <option value="$PROJECT_DIR$/public/components/DevRequest.jsx" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/public/components/DevBodyWall.jsx" />
-        <option value="$PROJECT_DIR$/public/reducers/mealrequests.js" />
         <option value="$PROJECT_DIR$/public/containers/DevMain.jsx" />
         <option value="$PROJECT_DIR$/public/reducers/useracount.js" />
-        <option value="$PROJECT_DIR$/public/containers/DevSignuppage.jsx" />
         <option value="$PROJECT_DIR$/public/containers/DevSigninform.jsx" />
+        <option value="$PROJECT_DIR$/public/containers/DevSignuppage.jsx" />
+        <option value="$PROJECT_DIR$/public/reducers/mealrequests.js" />
       </list>
     </option>
   </component>
@@ -919,7 +916,7 @@
         <state relative-caret-position="705">
           <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -983,7 +980,7 @@
         <state relative-caret-position="135">
           <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="16" />
           <folding>
-            <element signature="e#40#79#0" expanded="true" />
+            <element signature="e#40#79#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -993,8 +990,8 @@
         <state relative-caret-position="363">
           <caret line="61" column="21" lean-forward="false" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#236#298#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
+            <element signature="e#236#298#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1004,7 +1001,7 @@
         <state relative-caret-position="255">
           <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
-            <element signature="e#203#244#0" expanded="true" />
+            <element signature="e#203#244#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1014,17 +1011,6 @@
         <state relative-caret-position="120">
           <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/reducers/mealrequests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#41#111#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1083,22 +1069,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/containers/DevSignuppage.jsx">
+    <entry file="file://$PROJECT_DIR$/public/containers/DevSigninform.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="34" column="60" lean-forward="false" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/containers/DevSigninform.jsx">
+    <entry file="file://$PROJECT_DIR$/public/containers/DevSignuppage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="705">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/reducers/mealrequests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#41#111#0" expanded="true" />
           </folding>
         </state>
       </provider>

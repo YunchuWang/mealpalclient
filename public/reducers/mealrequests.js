@@ -4,7 +4,7 @@
 import { ADD_REQUEST, DELETE_REQUEST } from '../constants/ActionTypes'
 import axios from 'axios';
 
-axios.get('http://localhost:3002/post').then(function (response) {
+axios.get('https://secure-peak-60366.herokuapp.com/post').then(function (response) {
     console.log(response);
 }).catch(function (error) {
     console.log(error);
@@ -14,7 +14,7 @@ axios.get('http://localhost:3002/post').then(function (response) {
 export default function mealrequests(state = {count:0,mealrequests:[]}, action) {
     switch (action.type) {
         case ADD_REQUEST:
-            axios.post('http://localhost:3002/post',action.mealRequest).then(function(res){
+            axios.post('https://secure-peak-60366.herokuapp.com/post',action.mealRequest).then(function(res){
                 console.log(res);
             }).catch(function (error) {
                 console.log(error);

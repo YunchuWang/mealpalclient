@@ -56,7 +56,7 @@ class DevSignuppage extends React.Component {
 
         //assign _this to point to DevSignuppage which has context
         var _this = this;
-        axios.post('http://localhost:3002/signup',{
+        axios.post('https://secure-peak-60366.herokuapp.com/signup',{
             username: userid,
             password: password,
             email: email,

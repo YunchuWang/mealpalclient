@@ -12,21 +12,6 @@ import * as Actions from '../actions'
 class DevMain extends React.Component {
     logOut(event) {
         event.preventDefault();
-        // axios.post('http://139.59.16.82:3000/logout', {
-        //     token: window.session
-        // })
-        //     .then(function(response) {
-        //         console.log(response);
-        //         this.setState({success:response.data.success});
-        //         if(this.state.success === true) {
-        //             this.context.router.push('/');
-        //         }
-        //         console.log(window);
-        //     }.bind(this))
-        //     .catch(function (error) {
-        //             console.log(error);
-        //         }
-        //     );
         this.context.router.push('/');
     };
     render() {

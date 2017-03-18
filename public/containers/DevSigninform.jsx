@@ -3,10 +3,11 @@ import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import NavLink from '../components/NavLink.jsx';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import * as Actions from '../actions'
+import * as Actions from '../actions';
+import axios from 'axios';
 
 class DevSigninform extends React.Component {
-   constructor(props){
+    constructor(props){
         super(props);
         this.state = {
             email:this.props.userInfo.email,
@@ -15,60 +16,52 @@ class DevSigninform extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.logIn = this.logIn.bind(this);
     };
-   handleChange(event) {
-      switch(event.target.id) {
-           case 'loginemail':
-               this.setState({email: event.target.value});
-               break;
-           case 'loginpass':
-               this.setState({password: event.target.value});
-               break;
-      }
-      event.preventDefault();
-   };
-   logIn(event) {
-       event.preventDefault();
-       var email = this.state.email;
-       var password = this.state.password;
+    handleChange(event) {
+        switch(event.target.id) {
+            case 'loginemail':
+                this.setState({email: event.target.value});
+                break;
+            case 'loginpass':
+                this.setState({password: event.target.value});
+                break;
+        }
+        event.preventDefault();
+    };
+    logIn(event) {
+        event.preventDefault();
+        var _this = this;
+        var email = this.state.email;
+        var password = this.state.password;
+        axios.post('http://localhost:3002/login',{
+            password: password,
+            email: email
+        }).then(function (response) {
+            console.log(response);
+            if(response.data.status == "pass") {
+                _this.context.router.push('/DevMain');
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
+        this.props.actions.login(email,password);
 
-      //  axios.post('http://139.59.16.82:3000/login', {
-      //       email: email,
-      //       password: sha1(password)
-      //     })
-      //     .then(function(response) {
-      //        console.log(response);
-      //        this.setState({success:response.data.success});
-      //        if(this.state.success === true) {
-      //            window.userid = this.props.email;
-      //            window.session = response.data.session;
-      //            this.context.router.push('/DevMain');
-      //        }
-      //     }.bind(this))
-      //     .catch(function (error) {
-      //       console.log(error);
-      //
-      //     }
-      // );
-      this.props.actions.login(email,password);
-      this.context.router.push('/DevMain');
-
-   }
-   render() {
-      return (
-          <div>
-              <form className="login" method="post">
-                  <input id="loginemail" type="email" placeholder="email" name="email" value={this.state.email} onChange={this.handleChange} required/><br></br>
-                  <input id="loginpass" type="password" placeholder="password" name="password" onChange={this.handleChange} value={this.state.password} required/><br></br>
-                  <Link to="/DevSignuppage">
-                    <input type="button" value="Get Started" className="signupbutton" />
-                  </Link>
-                  <NavLink linkname="/DevMain" actions={this.props.actions} handleLogin={this.logIn}>
-                    <input type="button" value="Log In" className="loginbutton"/>
-                  </NavLink>
-              </form>
-          </div>
-      );
-   }
+    }
+    render() {
+        return (
+            <div>
+                <form className="login" method="post">
+                    <input id="loginemail" type="email" placeholder="email" name="email" value={this.state.email} onChange={this.handleChange} required/><br></br>
+                    <input id="loginpass" type="password" placeholder="password" name="password" onChange={this.handleChange} value={this.state.password} required/><br></br>
+                    <Link to="/DevSignuppage">
+                        <input type="button" value="Get Started" className="signupbutton" />
+                    </Link>
+                    <NavLink linkname="/DevMain" actions={this.props.actions} handleLogin={this.logIn}>
+                        <input type="button" value="Log In" className="loginbutton"/>
+                    </NavLink>
+                </form>
+            </div>
+        );
+    }
 }
 
 const mapStateToProps = state => ({

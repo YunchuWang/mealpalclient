@@ -2,6 +2,7 @@
  * Created by yunchu on 3/7/17.
  */
 import { SIGN_UP, USER_LOGIN } from '../constants/ActionTypes'
+import axios from 'axios';
 
 const initialState =
     {
@@ -27,9 +28,9 @@ export default function requesttoggle(state = initialState, action) {
             };
         case USER_LOGIN:
             return {
-                     ...state,
-                     username: action.username,
-                     password: action.password,
+                ...state,
+                username: action.username,
+                password: action.password,
             };
         default:
             return initialState;

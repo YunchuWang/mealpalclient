@@ -19,11 +19,11 @@ export default function mealrequests(state = {count:0,mealrequests:[]}, action) 
             }).catch(function (error) {
                 console.log(error);
             });
-            axios.post('https://onyen.unc.edu/cgi-bin/unc_id/authenticator.pl').then(function(res){
-                console.log(res);
-            }).catch(function (error) {
-                console.log(error);
-            });
+            // axios.post('https://onyen.unc.edu/cgi-bin/unc_id/authenticator.pl').then(function(res){
+            //     console.log(res);
+            // }).catch(function (error) {
+            //     console.log(error);
+            // });
             if(state.count !== 0  && state.mealrequests[0].length < 3) {
                 state.mealrequests[0].unshift(
                     action.mealRequest

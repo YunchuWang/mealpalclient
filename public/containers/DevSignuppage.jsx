@@ -3,7 +3,9 @@ import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import SignupLink from '../components/SignupLink.jsx';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import * as Actions from '../actions'
+import * as Actions from '../actions';
+import axios from 'axios';
+
 var sha1 = require('sha1');
 
 class DevSignuppage extends React.Component {
@@ -44,51 +46,34 @@ class DevSignuppage extends React.Component {
         event.preventDefault();
     };
     signUp(event) {
-        // event.preventDefault();
+        event.preventDefault();
         var email = this.state.email;
         var password = this.state.password;
         var hobbies = this.state.hobbies;
         var allergies = this.state.allergies;
         var schoolyear = this.state.schoolyear;
-        // var month = this.props.month;
-        // var day = this.props.day;
-        // var year = this.props.year;
         var userid = this.state.userid;
-        console.log(this.state);
-        {/*axios.post('http://139.59.16.82:3000/register', {*/}
-        {/*name: userid,*/}
-        {/*email: email,*/}
-        {/*day: day,*/}
-        {/*month: month,*/}
-        {/*year: year,*/}
-        {/*schoolyear: schoolyear,*/}
-        {/*allergies: allergies,*/}
-        {/*hobbies: hobbies,*/}
-        {/*password: sha1(password)*/}
-        {/*})*/}
-        {/*.then(function(response) {*/}
-        {/*console.log(response);*/}
-        {/*this.setState({success:response.data.success});*/}
-        {/*if(this.state.success === true) {*/}
-        //             window.userid = userid;
-        //             window.hobbies = hobbies;
-        //             window.allergies = allergies;
-        //             // console.log("from signup");
-        //             console.log(window.allergies);
-        //             window.schoolyear = schoolyear;
-        //             window.password = password;
-        //             window.month = month;
-        //             window.day = day;
-        //             window.year = year;
-        //             this.context.router.push('/');
-        //         }
-        //     }.bind(this))
-        //     .catch(function (error) {
-        //             console.log(error);
-        //         }
-        //     );
+
+        //assign _this to point to DevSignuppage which has context
+        var _this = this;
+        axios.post('http://localhost:3002/signup',{
+            username: userid,
+            password: password,
+            email: email,
+            hobbies: hobbies,
+            allergies:allergies,
+            schoolyear:schoolyear
+        }).then(function (response) {
+            console.log(response);
+            if(response.data.status === "pass") {
+                //access DevSignuppage's context property to router
+                _this.context.router.push('/DevMain');
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
+
         this.props.actions.signup(userid,password,email,hobbies,allergies,schoolyear);
-        this.context.router.push('/');
     }
     render() {
 

@@ -5,7 +5,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as Actions from '../actions';
 import axios from 'axios';
-
+import {apihost} from '../constants/global';
 var sha1 = require('sha1');
 
 class DevSignuppage extends React.Component {
@@ -56,7 +56,7 @@ class DevSignuppage extends React.Component {
 
         //assign _this to point to DevSignuppage which has context
         var _this = this;
-        axios.post('https://secure-peak-60366.herokuapp.com/signup',{
+        axios.post(apihost + '/signup',{
             username: userid,
             password: password,
             email: email,

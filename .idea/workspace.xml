@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf944c59-ae1a-4ad0-8c8f-4dd697a255d9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/constants/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/paths.js" afterPath="$PROJECT_DIR$/config/paths.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/containers/DevMain.jsx" afterPath="$PROJECT_DIR$/public/containers/DevMain.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/containers/DevSigninform.jsx" afterPath="$PROJECT_DIR$/public/containers/DevSigninform.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/containers/DevSignuppage.jsx" afterPath="$PROJECT_DIR$/public/containers/DevSignuppage.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/signup.css" afterPath="$PROJECT_DIR$/public/css/signup.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/reducers/mealrequests.js" afterPath="$PROJECT_DIR$/public/reducers/mealrequests.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,23 +28,14 @@
       <file leaf-file-name="DevMain.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/containers/DevMain.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="useracount.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/reducers/useracount.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#40#102#0" expanded="true" />
+                <marker date="1489878618000" expanded="true" signature="407:784" ph="{...}" />
+                <marker date="1489878618000" expanded="true" signature="427:505" ph="{...}" />
+                <marker date="1489878618000" expanded="true" signature="520:782" ph="{...}" />
+                <marker date="1489878618000" expanded="true" signature="551:766" ph="&lt;div/&gt;" />
               </folding>
             </state>
           </provider>
@@ -47,8 +44,8 @@
       <file leaf-file-name="mealrequests.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/reducers/mealrequests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+            <state relative-caret-position="210">
+              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#41#111#0" expanded="true" />
@@ -57,11 +54,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DevRequest.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/components/DevRequest.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="885">
+              <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/signup.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DevSignup.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/components/DevSignup.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DevSignuppage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/containers/DevSignuppage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+            <state relative-caret-position="315">
+              <caret line="63" column="32" lean-forward="false" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -69,23 +96,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignupLink.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/components/SignupLink.jsx">
+      <file leaf-file-name="DevSigninform.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/containers/DevSigninform.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="-495">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="44" />
+              <folding>
+                <marker date="1489852235000" expanded="true" signature="1043:1609" ph="{...}" />
+                <marker date="1489852235000" expanded="true" signature="1658:2482" ph="..." />
+                <marker date="1489852235000" expanded="true" signature="1713:2463" ph="..." />
+                <marker date="1489852235000" expanded="true" signature="2322:2439" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DevSigninform.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/containers/DevSigninform.jsx">
+      <file leaf-file-name="global.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/constants/global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="34" column="60" lean-forward="false" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
+            <state relative-caret-position="30">
+              <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="11" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#40#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -103,31 +135,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
+      <file leaf-file-name="DevModal.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/components/DevModal.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="52" column="61" lean-forward="false" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/actions/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requesttoggle.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/reducers/requesttoggle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="330">
+              <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -182,8 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/jsx/DevSignup.jsx" />
-        <option value="$PROJECT_DIR$/src/jsx/DevModal.jsx" />
         <option value="$PROJECT_DIR$/src/js/mealpal.js" />
         <option value="$PROJECT_DIR$/src/jsx/DevNavbar.jsx" />
         <option value="$PROJECT_DIR$/src/jsx/DevSidebar.jsx" />
@@ -197,7 +207,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/jsx/DevMain.jsx" />
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
-        <option value="$PROJECT_DIR$/config/paths.js" />
         <option value="$PROJECT_DIR$/public/reducers/requesttoggle.js" />
         <option value="$PROJECT_DIR$/public/jsx/DevMain.jsx" />
         <option value="$PROJECT_DIR$/public/jsx/DevSignup.jsx" />
@@ -228,10 +237,13 @@
         <option value="$PROJECT_DIR$/public/components/DevRequest.jsx" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/public/components/DevBodyWall.jsx" />
-        <option value="$PROJECT_DIR$/public/containers/DevMain.jsx" />
         <option value="$PROJECT_DIR$/public/reducers/useracount.js" />
+        <option value="$PROJECT_DIR$/config/paths.js" />
+        <option value="$PROJECT_DIR$/public/constants/global.js" />
         <option value="$PROJECT_DIR$/public/containers/DevSigninform.jsx" />
         <option value="$PROJECT_DIR$/public/containers/DevSignuppage.jsx" />
+        <option value="$PROJECT_DIR$/public/css/signup.css" />
+        <option value="$PROJECT_DIR$/public/containers/DevMain.jsx" />
         <option value="$PROJECT_DIR$/public/reducers/mealrequests.js" />
       </list>
     </option>
@@ -741,13 +753,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -852,20 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/env.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/paths.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="73" column="47" lean-forward="false" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -880,18 +871,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/signup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="253" column="20" lean-forward="false" selection-start-line="253" selection-start-column="20" selection-end-line="253" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -925,6 +909,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -943,14 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/DevModal.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/components/DevBodyMainNav.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -963,14 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/DevRequest.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -996,16 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/DevSignup.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#203#244#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/reducers/requesttoggle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1018,34 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/containers/DevMain.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/constants/ActionTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="52" column="61" lean-forward="false" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1063,36 +996,129 @@
         <state relative-caret-position="408">
           <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#40#102#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#40#102#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="52" column="61" lean-forward="false" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/paths.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/constants/ActionTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/constants/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/DevSignup.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/signup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/containers/DevSignuppage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="63" column="32" lean-forward="false" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/containers/DevSigninform.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="60" lean-forward="false" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
+        <state relative-caret-position="-495">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="44" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1489852235000" expanded="true" signature="1043:1609" ph="{...}" />
+            <marker date="1489852235000" expanded="true" signature="1658:2482" ph="..." />
+            <marker date="1489852235000" expanded="true" signature="1713:2463" ph="..." />
+            <marker date="1489852235000" expanded="true" signature="2322:2439" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/containers/DevSignuppage.jsx">
+    <entry file="file://$PROJECT_DIR$/public/components/DevRequest.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        <state relative-caret-position="885">
+          <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/DevModal.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/containers/DevMain.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+            <marker date="1489878618000" expanded="true" signature="407:784" ph="{...}" />
+            <marker date="1489878618000" expanded="true" signature="427:505" ph="{...}" />
+            <marker date="1489878618000" expanded="true" signature="520:782" ph="{...}" />
+            <marker date="1489878618000" expanded="true" signature="551:766" ph="&lt;div/&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/reducers/mealrequests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        <state relative-caret-position="210">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#41#111#0" expanded="true" />

@@ -6,7 +6,7 @@ import '../css/style.css';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as Actions from '../actions'
-// import axios from 'axios';
+import axios from 'axios';
 
 
 class DevMain extends React.Component {
@@ -20,9 +20,7 @@ class DevMain extends React.Component {
                 <DevNavbar {...this.props} handleLogout={this.logOut.bind(this)}/>
                 <DevSidebar {...this.props}/>
                 <DevBody {...this.props} />
-
             </div>
-
         )
     }
 }

@@ -3,18 +3,27 @@
  */
 import { ADD_REQUEST, DELETE_REQUEST } from '../constants/ActionTypes'
 import axios from 'axios';
+import {apihost} from '../constants/global';
+// var fetch = require('node-fetch');
+axios.defaults.withCredentials = true;
 
-axios.get('https://secure-peak-60366.herokuapp.com/post').then(function (response) {
+
+axios.get(apihost + '/post').then(function (response) {
     console.log(response);
 }).catch(function (error) {
     console.log(error);
 });
-
+fetch(apihost + '/post')
+    .then(function(res) {
+        return res.text();
+    }).then(function(body) {
+        console.log(body);
+    });
 
 export default function mealrequests(state = {count:0,mealrequests:[]}, action) {
     switch (action.type) {
         case ADD_REQUEST:
-            axios.post('https://secure-peak-60366.herokuapp.com/post',action.mealRequest).then(function(res){
+            axios.post(apihost + '/post',action.mealRequest).then(function(res){
                 console.log(res);
             }).catch(function (error) {
                 console.log(error);

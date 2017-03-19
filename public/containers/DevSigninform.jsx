@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as Actions from '../actions';
 import axios from 'axios';
+import {apihost} from '../constants/global';
 
 class DevSigninform extends React.Component {
     constructor(props){
@@ -32,7 +33,7 @@ class DevSigninform extends React.Component {
         var _this = this;
         var email = this.state.email;
         var password = this.state.password;
-        axios.post('https://secure-peak-60366.herokuapp.com/login',{
+        axios.post(apihost + '/login',{
             password: password,
             email: email
         }).then(function (response) {

@@ -78,4 +78,5 @@ module.exports = {
     servedPath: getServedPath(resolveApp('package.json')),
     port: process.env.PORT || 8080,
     host: process.env.HOST || '0.0.0.0'
+    // apihost: "http://localhost:3002/"
 };

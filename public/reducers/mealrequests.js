@@ -8,21 +8,22 @@ import {apihost} from '../constants/global';
 axios.defaults.withCredentials = true;
 
 
-axios.get(apihost + '/post').then(function (response) {
-    console.log(response);
-}).catch(function (error) {
-    console.log(error);
-});
-fetch(apihost + '/post')
-    .then(function(res) {
-        return res.text();
-    }).then(function(body) {
-        console.log(body);
-    });
+
+// fetch(apihost + '/post')
+//     .then(function(res) {
+//         return res.text();
+//     }).then(function(body) {
+//         console.log(body);
+//     });
 
 export default function mealrequests(state = {count:0,mealrequests:[]}, action) {
     switch (action.type) {
         case ADD_REQUEST:
+            axios.get(apihost + '/post').then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                console.log(error);
+            });
             axios.post(apihost + '/post',action.mealRequest).then(function(res){
                 console.log(res);
             }).catch(function (error) {

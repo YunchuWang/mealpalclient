@@ -7,12 +7,33 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as Actions from '../actions'
 import axios from 'axios';
-
+import {apihost} from '../constants/global';
 
 class DevMain extends React.Component {
+    componentWillMount() {
+        var _this = this;
+        axios.get(apihost + '/post').then(function (response) {
+            if(response.data.status === "fail") {
+                _this.context.router.push('/');
+            } else {
+                _this.props.actions.getRequests(response.data.content,response.data.length);
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
     logOut(event) {
         event.preventDefault();
-        this.context.router.push('/');
+        var _this = this;
+        axios.get(apihost + '/logout').then(function (response) {
+            console.log(response);
+            if(response.data.status === "pass") {
+                _this.context.router.push('/');
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
+        this.props.actions.logout();
     };
     render() {
         return (

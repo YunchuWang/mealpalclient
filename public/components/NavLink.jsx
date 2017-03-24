@@ -12,11 +12,7 @@ class NavLink extends React.Component {
 
    render() {
       return (
-          //remove this line after adding backend
-          // <Link to="/DevMain">
-          //     {this.props.children}
-          // </Link>
-          <div onClick={this.props.handleLogin}>
+          <div onClick={this.props.handleClick}>
             {this.props.children}
           </div>
       );

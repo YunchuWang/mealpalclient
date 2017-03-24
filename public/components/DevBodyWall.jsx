@@ -7,18 +7,17 @@ import DevRequest from "./DevRequest.jsx";
 // import axios from "axios";
 import {Modal, Button, OverlayTrigger} from "react-bootstrap";
 import DevModal from './DevModal'
-
+import axios from 'axios';
+import {apihost} from '../constants/global';
 
 class DevBodyWall extends React.PureComponent {
     constructor(props,context){
-        // jQuery.support.cors = true;
         super(props,context);
         this.state = {
             dvalue: '',
             svalue:'',
             avvalue:'',
             lvalue:''
-            // reqcount: 0
         };
         this.addRequest = this.addRequest.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -50,12 +49,32 @@ class DevBodyWall extends React.PureComponent {
     };
     addRequest(e) {
         var newrequest = {
-          key: Date(),
-          description: this.state.dvalue,
-          availtime: this.state.avvalue,
-          location: this.state.lvalue
+            key: Date(),
+            description: this.state.dvalue,
+            availtime: this.state.avvalue,
+            location: this.state.lvalue
         }
-        this.props.actions.addRequest(newrequest);
+        var _this = this;
+        //refresh feed after adding new post
+        axios.post(apihost + '/post',newrequest).then(function(res){
+            if(res.data.status === 'fail') {
+                _this.context.router.push('/');
+            } else {
+                _this.props.actions.addRequest(newrequest);
+                axios.get(apihost + '/post').then(function (response) {
+                    if(response.data.status === 'fail') {
+                        _this.context.router.push('/');
+                    } else {
+                        _this.props.actions.getRequests(response.data.content,response.data.length);
+                    }
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
+
         this.setState ({
             dvalue: '',
             avvalue:'',
@@ -67,7 +86,7 @@ class DevBodyWall extends React.PureComponent {
 
     render() {
         var DevReq =  <div></div>;
-        console.log("pass")
+        // console.log("pass")
         if (this.props.requestsInfo.count !== 0) {
             DevReq = <DevRequest requestinfo={this.props.requestsInfo.mealrequests} count={this.props.requestsInfo.count}/>;
         }
@@ -83,4 +102,7 @@ class DevBodyWall extends React.PureComponent {
     }
 }
 
+DevBodyWall.contextTypes = {
+    router: React.PropTypes.object.isRequired
+};
 export default DevBodyWall;

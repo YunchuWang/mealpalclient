@@ -38,7 +38,7 @@ class DevSigninform extends React.Component {
             email: email
         }).then(function (response) {
             console.log(response);
-            if(response.data.status == "pass") {
+            if(response.data.status === "pass") {
                 _this.context.router.push('/DevMain');
             }
         }).catch(function (error) {
@@ -56,7 +56,7 @@ class DevSigninform extends React.Component {
                     <Link to="/DevSignuppage">
                         <input type="button" value="Get Started" className="signupbutton" />
                     </Link>
-                    <NavLink linkname="/DevMain" actions={this.props.actions} handleLogin={this.logIn}>
+                    <NavLink linkname="/DevMain" actions={this.props.actions} handleClick={this.logIn}>
                         <input type="button" value="Log In" className="loginbutton"/>
                     </NavLink>
                 </form>

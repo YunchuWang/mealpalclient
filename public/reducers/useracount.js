@@ -1,17 +1,16 @@
 /**
  * Created by yunchu on 3/7/17.
  */
-import { SIGN_UP, USER_LOGIN } from '../constants/ActionTypes'
-import axios from 'axios';
+import { SIGN_UP, USER_LOGIN, USER_LOGOUT } from '../constants/ActionTypes'
+// import axios from 'axios';
 
 const initialState =
     {
-        username: '',
+        firstname: '',
+        lastname: '',
         password: '',
         email: '',
-        hobbies:'',
-        allergies:'',
-        schoolyear:''
+        username: ''
     }
 
 
@@ -20,17 +19,16 @@ export default function requesttoggle(state = initialState, action) {
         case SIGN_UP:
             return {
                 username: action.username,
+                firstname: action.firstname,
+                lastname: action.lastname,
                 password: action.password,
-                email: action.email,
-                hobbies: action.hobbies,
-                allergies:action.allergies,
-                schoolyear:action.schoolyear
+                email: action.email
             };
         case USER_LOGIN:
             return {
                 ...state,
                 username: action.username,
-                password: action.password,
+                password: action.password
             };
         default:
             return initialState;

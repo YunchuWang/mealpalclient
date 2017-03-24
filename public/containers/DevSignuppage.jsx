@@ -14,10 +14,11 @@ class DevSignuppage extends React.Component {
         this.state = {
             userid: '',
             email: '',
+            firstname: '',
+            lastname: '',
             password:'',
-            hobbies:'',
-            allergies:'',
-            schoolyear:''
+            confirmpassword:''
+
         };
         this.handleChange = this.handleChange.bind(this);
         this.signUp = this.signUp.bind(this);
@@ -33,15 +34,14 @@ class DevSignuppage extends React.Component {
             case 'signpass':
                 this.setState({password: event.target.value});
                 break;
-            case 'signhobby':
-                this.setState({hobbies: event.target.value});
+            case 'firstname':
+                this.setState({firstname: event.target.value});
                 break;
-            case 'signallergy':
-                this.setState({allergies: event.target.value});
+            case 'lastname':
+                this.setState({lastname: event.target.value});
                 break;
-            case 'signyear':
-                this.setState({schoolyear: event.target.value});
-                break;
+            case 'signpasscon':
+                this.setState({confirmpassword: event.target.value});
         }
         event.preventDefault();
     };
@@ -49,9 +49,8 @@ class DevSignuppage extends React.Component {
         event.preventDefault();
         var email = this.state.email;
         var password = this.state.password;
-        var hobbies = this.state.hobbies;
-        var allergies = this.state.allergies;
-        var schoolyear = this.state.schoolyear;
+        var firstname = this.state.firstname;
+        var lastname = this.state.lastname;
         var userid = this.state.userid;
 
         //assign _this to point to DevSignuppage which has context
@@ -60,9 +59,8 @@ class DevSignuppage extends React.Component {
             username: userid,
             password: password,
             email: email,
-            hobbies: hobbies,
-            allergies:allergies,
-            schoolyear:schoolyear
+            firstname: firstname,
+            lastname: lastname
         }).then(function (response) {
             console.log(response);
             if(response.data.status === "pass") {
@@ -73,22 +71,19 @@ class DevSignuppage extends React.Component {
             console.log(error);
         });
 
-        this.props.actions.signup(userid,password,email,hobbies,allergies,schoolyear);
+        this.props.actions.signup(userid,password,email,firstname,lastname);
     }
     render() {
 
         return (
             <div>
                 <form className="login signup">
-                    <input type="text" placeholder="Username" name="user" id="signid" value={this.state.userid} onChange={this.handleChange} required /><br></br>
+                    <input type="text" placeholder="First name" name="firstname" id="firstname" value={this.state.firstname} onChange={this.handleChange} required /><br></br>
+                    <input type="text" placeholder="Last name " name="lastname" id="lastname" value={this.state.lastname} onChange={this.handleChange} required /><br></br>
                     <input type="email" placeholder="Email" name="email" id="signemail" value={this.state.email} onChange={this.handleChange} required /><br></br>
+                    <input type="text" placeholder="Username" name="user" id="signid" value={this.state.userid} onChange={this.handleChange} required /><br></br>
                     <input type="password" placeholder="Password" name="password" id="signpass" value={this.state.password} onChange={this.handleChange} required /><br></br>
-                    <input type="text" placeholder="Hobbies" name="hobbies" id="signhobby" value={this.state.hobbies} onChange={this.handleChange} required /><br></br>
-                    <input type="text" placeholder="Allergies" name="allergies" id="signallergy" value={this.state.allergies} onChange={this.handleChange} required /><br></br>
-                    <input type="text" placeholder="Schoolyear" name="schoolyear" id="signyear" value={this.state.schoolyear} onChange={this.handleChange} required /><br></br>
-                    {/*<SignupLink userid={this.state.userid} email={this.state.email} password={this.state.password} hobbies={this.state.hobbies} allergies={this.state.allergies} schoolyear={this.state.schoolyear} month="10" day="10" year="1993" actions={this.props.actions}>*/}
-                    {/*<input type="submit" value="Sign up" className="signupbutton" />*/}
-                    {/*</SignupLink>*/}
+                    <input type="password" placeholder="Confirm your password" name="cpassword" id="signpasscon" value={this.state.password} onChange={this.handleChange} required /><br></br>
                     <SignupLink handleSignup={this.signUp}>
                         <input type="submit" value="Sign up" className="signupbutton" />
                     </SignupLink>

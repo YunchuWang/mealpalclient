@@ -13,7 +13,7 @@ class DevModal extends React.Component {
                     </Modal.Header>
                     <div className="modal-container">
                         <Modal.Body className="modal-body">
-                            <textarea placeholder="Eat me please..." id="description" onChange={this.props.onChange} value={this.props.dvalue}></textarea>
+                            <textarea placeholder="Eat me please..." id="description" onChange={this.props.onChange} value={this.props.dvalue} required></textarea>
                         </Modal.Body>
                         <Modal.Footer className="modal-footer">
                             <div className="col-sm-5">

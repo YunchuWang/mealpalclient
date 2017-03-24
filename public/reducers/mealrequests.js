@@ -17,6 +17,7 @@ export default function mealrequests(state = {count:0,mealrequests:[]}, action) 
             return {
             };
         case GET_REQUESTS:
+            console.log("pass");
             return {count: action.length , mealrequests: action.content};
         default:
             return state;

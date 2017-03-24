@@ -9,9 +9,9 @@ class DevRequest extends React.Component {
     // constructor(props){
     //     super(props);
     // };
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.props.count !== nextProps.count;
-    };
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     return this.props.count !== nextProps.count;
+    // };
 
     render() {
         var requests = this.props.requestinfo.map(function(request){

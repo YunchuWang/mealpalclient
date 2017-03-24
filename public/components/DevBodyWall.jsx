@@ -10,7 +10,7 @@ import DevModal from './DevModal'
 import axios from 'axios';
 import {apihost} from '../constants/global';
 
-class DevBodyWall extends React.PureComponent {
+class DevBodyWall extends React.Component {
     constructor(props,context){
         super(props,context);
         this.state = {
@@ -56,13 +56,12 @@ class DevBodyWall extends React.PureComponent {
         }
         var _this = this;
         //refresh feed after adding new post
-        axios.post(apihost + '/post',newrequest).then(function(res){
+        axios.post(apihost + '/post', newrequest).then(function(res){
             if(res.data.status === 'fail') {
                 _this.context.router.push('/');
             } else {
-                _this.props.actions.addRequest(newrequest);
                 axios.get(apihost + '/post').then(function (response) {
-                    if(response.data.status === 'fail') {
+                    if(response.data.status === "fail") {
                         _this.context.router.push('/');
                     } else {
                         _this.props.actions.getRequests(response.data.content,response.data.length);

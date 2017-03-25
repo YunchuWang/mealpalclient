@@ -12,15 +12,25 @@ import {apihost} from '../constants/global';
 class DevMain extends React.Component {
     componentWillMount() {
         var _this = this;
-        axios.get(apihost + '/post').then(function (response) {
+        axios.get(apihost + '/login').then(function(response){
             if(response.data.status === "fail") {
                 _this.context.router.push('/');
             } else {
-                _this.props.actions.getRequests(response.data.content,response.data.length);
+                axios.get(apihost + '/post').then(function (response) {
+                    console.log(response.locals);
+                    if(response.data.status === "fail") {
+                        _this.context.router.push('/');
+                    } else {
+                        _this.props.actions.getRequests(response.data.content,response.data.length);
+                    }
+                }).catch(function (error) {
+                    console.log(error);
+                });
             }
         }).catch(function (error) {
             console.log(error);
         });
+
     }
     logOut(event) {
         event.preventDefault();

@@ -5,11 +5,13 @@ import { combineReducers } from 'redux'
 import requesttoggle from './requesttoggle'
 import useraccount from './useracount'
 import mealrequests from './mealrequests'
+import { reducer as formReducer } from 'redux-form'
 
 const rootReducer = combineReducers({
     showModal: requesttoggle,
     userInfo: useraccount,
-    requestsInfo: mealrequests
+    requestsInfo: mealrequests,
+    form: formReducer
 })
 
 export default rootReducer

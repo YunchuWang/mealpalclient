@@ -85,7 +85,6 @@ class DevBodyWall extends React.Component {
 
     render() {
         var DevReq =  <div></div>;
-        // console.log("pass")
         if (this.props.requestsInfo.count !== 0) {
             DevReq = <DevRequest requestinfo={this.props.requestsInfo.mealrequests} count={this.props.requestsInfo.count}/>;
         }

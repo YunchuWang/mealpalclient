@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf944c59-ae1a-4ad0-8c8f-4dd697a255d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevBody.jsx" afterPath="$PROJECT_DIR$/public/components/DevBody.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevBodySubNav.jsx" afterPath="$PROJECT_DIR$/public/components/DevBodySubNav.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevModal.jsx" afterPath="$PROJECT_DIR$/public/components/DevModal.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevSidebar.jsx" afterPath="$PROJECT_DIR$/public/components/DevSidebar.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-    </list>
+    <list default="true" id="cf944c59-ae1a-4ad0-8c8f-4dd697a255d9" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +28,8 @@
       <file leaf-file-name="DevBody.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/components/DevBody.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="405">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1124,8 +1118,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/components/DevBody.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="405">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>

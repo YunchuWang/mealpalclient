@@ -20,6 +20,7 @@ class DevSigninContainer extends React.Component {
         this.logIn = this.logIn.bind(this);
     };
     handleChange(event) {
+        event.preventDefault();
         switch(event.target.id) {
             case 'loginemail':
                 this.setState({email: event.target.value});
@@ -28,7 +29,7 @@ class DevSigninContainer extends React.Component {
                 this.setState({password: event.target.value});
                 break;
         }
-        event.preventDefault();
+
     };
     logIn(event) {
         event.preventDefault();

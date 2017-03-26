@@ -6,6 +6,7 @@ import requesttoggle from './requesttoggle'
 import useraccount from './useracount'
 import mealrequests from './mealrequests'
 import { reducer as formReducer } from 'redux-form'
+import validate from '../components/validate'
 
 const rootReducer = combineReducers({
     showModal: requesttoggle,
@@ -14,4 +15,4 @@ const rootReducer = combineReducers({
     form: formReducer
 })
 
-export default rootReducer
+export default rootReducer;

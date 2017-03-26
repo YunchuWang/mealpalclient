@@ -1,6 +1,5 @@
 import React,{PropTypes} from 'react';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
-import SignupLink from '../components/SignupLink.jsx';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as Actions from '../actions';
@@ -66,7 +65,6 @@ class DevSignUpContainer extends React.Component {
         }).then(function (response) {
             console.log(response);
             if(response.data.status === "pass") {
-                //access DevSignuppage's context property to router
                 _this.context.router.push('/DevMain');
             }
         }).catch(function (error) {
@@ -79,7 +77,7 @@ class DevSignUpContainer extends React.Component {
 
         return (
             <div>
-                <DevSignUpForm handleSubmit={this.signUp} pristine={false}  submitting={true} emailvalue={this.state.email} password={this.state.password} passwordconfirm={this.state.confirmpassword} firstname={this.state.firstname} lastname={this.state.lastname} username={this.state.userid} handleChange={this.handleChange}></DevSignUpForm>
+                <DevSignUpForm onSubmit={this.signUp} emailvalue={this.state.email} password={this.state.password} passwordconfirm={this.state.confirmpassword} firstname={this.state.firstname} lastname={this.state.lastname} username={this.state.userid} handleChange={this.handleChange}></DevSignUpForm>
             </div>
         );
     }

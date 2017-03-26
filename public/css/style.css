@@ -659,3 +659,7 @@ button:hover,
 .modal-footer .col-sm-5 {
     margin-top: 10px;
 }
+.mealrequestmodal {
+    height: 1vw;
+    width: 1vw;
+}

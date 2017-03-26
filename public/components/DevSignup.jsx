@@ -1,8 +1,6 @@
 import React,{PropTypes} from 'react';
 import '../css/signup.css';
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+
 
 const DevSignup = (props) => (
     <div className="signupstyle">

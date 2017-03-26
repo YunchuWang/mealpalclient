@@ -1,12 +1,9 @@
 import React,{PropTypes} from 'react';
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
-import NavLink from '../components/NavLink.jsx';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as Actions from '../actions';
 import axios from 'axios';
 import {apihost} from '../constants/global';
-import { Field, reduxForm } from 'redux-form';
 import DevSignInForm from '../components/DevSignInForm';
 
 class DevSigninContainer extends React.Component {
@@ -49,12 +46,12 @@ class DevSigninContainer extends React.Component {
             console.log(error);
         });
         this.props.actions.login(email,password);
-
+        // alert("hello");
     }
     render() {
         return (
             <div>
-                <DevSignInForm handleSubmit={this.logIn} pristine={false}  submitting={false} emailvalue={this.state.email} password={this.state.password} handleChange={this.handleChange}></DevSignInForm>
+                <DevSignInForm handleSubmit={this.logIn} emailvalue={this.state.email} password={this.state.password} handleChange={this.handleChange}></DevSignInForm>
             </div>
 
         );

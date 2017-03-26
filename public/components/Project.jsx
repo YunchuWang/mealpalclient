@@ -13,7 +13,7 @@ class Project extends React.Component {
         return (
             <div>
                 <DevSignup>
-                    <DevSigninContainer submitting={false}></DevSigninContainer>
+                    <DevSigninContainer></DevSigninContainer>
                 </DevSignup>
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
+// import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import TimeAgo from 'react-timeago';
 
 var timeagostyle = {

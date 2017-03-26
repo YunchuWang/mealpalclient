@@ -5,7 +5,7 @@ import "../css/bootstrap-theme.css";
 import "../css/bootstrap-theme.min.css";
 import DevRequest from "./DevRequest.jsx";
 // import axios from "axios";
-import {Modal, Button, OverlayTrigger} from "react-bootstrap";
+// import {Modal, Button, OverlayTrigger} from "react-bootstrap";
 import DevModal from './DevModal'
 import axios from 'axios';
 import {apihost} from '../constants/global';

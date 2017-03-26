@@ -29,8 +29,8 @@ const renderField = ({ input, label, type, value,handleChange,idval, meta: { tou
     </div>
 )
 
-const FieldLevelValidationForm = (props) => {
-    const { handleSubmit, pristine,  submitting, handleChange, emailvalue, password } = props
+const DevSignInForm = (props) => {
+    const { handleSubmit, handleChange, emailvalue, password } = props
     return (
         <form className="login" onSubmit={handleSubmit}>
 
@@ -44,17 +44,14 @@ const FieldLevelValidationForm = (props) => {
                    value={password}
                    warn={aol} handleChange={handleChange}
             />
-            <Link to="/DevSignuppage">
+            <Link to="/DevSignUpContainer">
                 <input type="button" value="Get Started" className="signupbutton" />
             </Link>
-            <div>
-                <button type="submit" disabled={submitting}>Submit</button>
-                {/*<button type="button" disabled={pristine || submitting} onClick={reset}>Clear Values</button>*/}
-            </div>
+            <input type ="submit" value ="Log In" className = "signupbutton" />
         </form>
     )
-}
+    }
 
-export default reduxForm({
-    form: 'fieldLevelValidation' // a unique identifier for this form
-})(FieldLevelValidationForm)
+    export default reduxForm({
+        form: 'devSignInForm' // a unique identifier for this form
+    })(DevSignInForm)

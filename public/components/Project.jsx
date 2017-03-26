@@ -2,8 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import DevSignup from './DevSignup.jsx';
-import DevSigninform from '../containers/DevSigninform.jsx';
-import FieldLevelValidationForm from './FieldLevelValidationForm'
+import DevSigninContainer from '../containers/DevSigninContainer.jsx';
 
 
 
@@ -14,7 +13,7 @@ class Project extends React.Component {
         return (
             <div>
                 <DevSignup>
-                    <DevSigninform submitting={false}></DevSigninform>
+                    <DevSigninContainer submitting={false}></DevSigninContainer>
                 </DevSignup>
 
 

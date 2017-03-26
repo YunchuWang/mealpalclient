@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import Project from '../public/components/Project.jsx';
 import DevMain from '../public/containers/DevMain.jsx';
 import DevSignup from '../public/components/DevSignup.jsx';
-import DevSigninform from '../public/containers/DevSigninform.jsx';
-import DevSignuppage from '../public/containers/DevSignuppage.jsx';
+import DevSigninContainer from '../public/containers/DevSigninContainer.jsx';
+import DevSignUpContainer from '../public/containers/DevSignUpContainer.jsx';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import { createStore,combineReducers, applyMiddleware } from 'redux';
 import rootReducer from '../public/reducers/index';
@@ -37,12 +37,6 @@ let store = finalCreateStore(rootReducer)
 //     console.log(store.getState());
 // },10000)
 
-// store.dispatch({
-//     type : ActionTypes.SIGN_UP,
-//     username: 'asd',
-//     password: 'ninini',
-//     email: 'asdsd'
-// })
 
 
 
@@ -52,8 +46,8 @@ ReactDOM.render((
                 <Route path="/" component={Project} />
                 <Route path="/DevMain" component={DevMain} />
                 <Route path="/DevSignup" component={DevSignup}>
-                    <Route path="/DevSignuppage" component={DevSignuppage} />
-                    <Route path="/DevSigninform" component={DevSigninform} />
+                    <Route path="/DevSignUpContainer" component={DevSignUpContainer} />
+                    <Route path="/DevSigninContainer" component={DevSigninContainer} />
                 </Route>
             </Router>
         </Provider>

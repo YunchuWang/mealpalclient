@@ -6,9 +6,27 @@ import {connect} from 'react-redux';
 import * as Actions from '../actions';
 import axios from 'axios';
 import {apihost} from '../constants/global';
+import DevSignUpForm from '../components/DevSignUpForm';
+
 var sha1 = require('sha1');
 
-class DevSignuppage extends React.Component {
+
+{/*<form className="login signup">*/}
+    {/*<input type="text" placeholder="First name" name="firstname" id="firstname" value={this.state.firstname} onChange={this.handleChange} required /><br></br>*/}
+    {/*<input type="text" placeholder="Last name " name="lastname" id="lastname" value={this.state.lastname} onChange={this.handleChange} required /><br></br>*/}
+    {/*<input type="email" placeholder="Email" name="email" id="signemail" value={this.state.email} onChange={this.handleChange} required /><br></br>*/}
+    {/*<input type="text" placeholder="Username" name="user" id="signid" value={this.state.userid} onChange={this.handleChange} required /><br></br>*/}
+    {/*<input type="password" placeholder="Password" name="password" id="signpass" value={this.state.password} onChange={this.handleChange} required /><br></br>*/}
+    {/*<input type="password" placeholder="Confirm your password" name="cpassword" id="signpasscon" value={this.state.password} onChange={this.handleChange} required /><br></br>*/}
+    {/*<SignupLink handleSignup={this.signUp}>*/}
+        {/*<input type="submit" value="Sign up" className="signupbutton" />*/}
+    {/*</SignupLink>*/}
+{/*</form>*/}
+
+
+
+
+class DevSignUpContainer extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -77,17 +95,7 @@ class DevSignuppage extends React.Component {
 
         return (
             <div>
-                <form className="login signup">
-                    <input type="text" placeholder="First name" name="firstname" id="firstname" value={this.state.firstname} onChange={this.handleChange} required /><br></br>
-                    <input type="text" placeholder="Last name " name="lastname" id="lastname" value={this.state.lastname} onChange={this.handleChange} required /><br></br>
-                    <input type="email" placeholder="Email" name="email" id="signemail" value={this.state.email} onChange={this.handleChange} required /><br></br>
-                    <input type="text" placeholder="Username" name="user" id="signid" value={this.state.userid} onChange={this.handleChange} required /><br></br>
-                    <input type="password" placeholder="Password" name="password" id="signpass" value={this.state.password} onChange={this.handleChange} required /><br></br>
-                    <input type="password" placeholder="Confirm your password" name="cpassword" id="signpasscon" value={this.state.password} onChange={this.handleChange} required /><br></br>
-                    <SignupLink handleSignup={this.signUp}>
-                        <input type="submit" value="Sign up" className="signupbutton" />
-                    </SignupLink>
-                </form>
+                <DevSignUpForm handleSubmit={this.signUp} pristine={false}  submitting={false} emailvalue={this.state.email} password={this.state.password} passwordconfirm={this.state.confirmpassword} firstname={this.state.firstname} lastname={this.state.lastname} username={this.state.userid} handleChange={this.handleChange}></DevSignUpForm>
             </div>
         );
     }
@@ -99,13 +107,13 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(Actions, dispatch)
 })
-DevSignuppage.propTypes = {
+DevSignUpContainer.propTypes = {
     userInfo: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired
 }
-DevSignuppage.contextTypes = {
+DevSignUpContainer.contextTypes = {
     router: React.PropTypes.object.isRequired
 };
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(DevSignuppage);
+export default connect(mapStateToProps,mapDispatchToProps)(DevSignUpContainer);

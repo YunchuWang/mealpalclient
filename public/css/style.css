@@ -1,24 +1,24 @@
 @media (min-width: 768px) {
-.modal-content {
-    box-shadow: inset 0px 1px 5px rgb(183, 36, 36) !important;
-}}
+    .modal-content {
+        box-shadow: inset 0px 1px 5px rgb(183, 36, 36) !important;
+    }}
 @media (min-width: 768px){
-.col-sm-5 {
-    width: 6.666667% !important;
-}}
+    .col-sm-5 {
+        width: 6.666667% !important;
+    }}
 
 #black{
-color: #000 !important;
+    color: #000 !important;
 }
 div>li:not(:nth-child(2)) a {
-  color: #000 !important;
+    color: #000 !important;
 }
 .category-content, .media .media-body
 {
-  color: #000 !important;
+    color: #000 !important;
 }
 li:not(:nth-child(2)) a:hover, .sidebar-nav >div> li:not(:nth-child(2)) a:hover{
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
 .navbar > div {
     float: left;
@@ -27,7 +27,7 @@ li:not(:nth-child(2)) a:hover, .sidebar-nav >div> li:not(:nth-child(2)) a:hover{
     text-decoration: none;
     height: 100%;
     width: 46% !important;
-  }
+}
 
 #DevMainstyle {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
@@ -51,7 +51,7 @@ html,body{
     min-width: 260px;
     min-height: 2952px;
     height:100%;
-    background-color: #fff;
+    background-color: #F3FAB6;
     top:48px;
     bottom: 0px;
     left:0;
@@ -59,75 +59,22 @@ html,body{
 
     border-top: 1px solid #C0C0C0;
 }
-.DevContainer {
-
-}
-.breadcrumb li i{
-    padding-right: 30px;
-    width:14px;
-    height: 14px;
-}
-.breadcrumb-elements {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    float: right;
-    position: absolute;
-    top:0;
-    right: 0px;
-    height: 38px;
-    width: 204px;
-}
-.breadcrumb-elements li {
-    display: inline-block;
-    width:102px;
-    height:38px;
-}
-.breadcrumb-elements li a {
-    position: relative;
-    width:100% !important;
-    height: 100% !important;
-    top: 0px;
-    left: 0px;
-    display: block;
-    padding: 10px 0px 10px 17px;
-    font-size: 12px;
-    text-decoration: none;
-}
-
-.breadcrumb-elements li a span {
-    color: black !important;
-    padding-right: 5px;
-}
-.breadcrumb-elements li a:hover {
-    background-color: #E6E6E6 !important;
-    transition: background-color 0.8s ease;
-    text-decoration: none;
-}
-.breadcrumb-elements li a i {
-    padding-right: 10px;
-    color: #2196F3;
-}
-.breadcrumb-elements .dropdown> a {
-    padding-left:0px !important;
-    margin:0px !important;
-}
 
 .DevBodyGrids {
-  width: 100%;
-  position: absolute;
-  top: 121px;
-  left: -11px;
-  margin-top: 10px;
-  padding: 0px;
-  overflow: auto!important;
-  height: 2794px;
+    width: 100%;
+    position: absolute;
+    top: 121px;
+    left: -11px;
+    margin-top: 10px;
+    padding: 0px;
+    overflow: auto!important;
+    height: 2794px;
 
 }
 .whitegrid {
-/*    background-color: white;*/
+    /*    background-color: white;*/
     margin-bottom: 20px;
-/*    color: #333;*/
+    /*    color: #333;*/
 }
 
 .sidebar-header {
@@ -442,7 +389,7 @@ html,body{
 }
 
 .navbarStyle {
-  color: white;
+    color: white;
     width: 100%;
     height: 48px;
     background-color: #c13e3e;
@@ -496,7 +443,7 @@ html,body{
 .heading-button {
     width: 90px;
     height: 63px;
-    background-color:white !important;
+    background-color:#F3FAB6 !important;
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -536,29 +483,29 @@ button:hover,
     outline: 0 !important;
 }
 .devbodymainnavStyle {
-  width: 100%;
-  height: 93px;
-  background-color: white;
-  position:absolute;
-  top: 0px;
-  left: 0px;
-  padding: 0px 20px;
+    width: 100%;
+    height: 93px;
+    background-color: #F3FAB6;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px 20px;
 }
 
 .bodyStyle {
-  color: blue;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0px;
-  z-index: 2;
+    color: blue;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    z-index: 2;
 }
 
 .modalBody {
     position: absolute !important;
     width: 600px !important;
-	left: calc(50% - 300px) !important;
+    left: calc(50% - 300px) !important;
     height: 500px !important;
     top: calc(50% - 270px);
 }
@@ -569,11 +516,11 @@ button:hover,
 }
 .modal-content {
     position: relative;
-    background-color: #DF3D82 !important;
+    background-color: #E44424 !important;
     background-clip: padding-box;
     /*border: 1px solid #74AFAD !important;*/
     /*border: 6px solid #fcf8e3 !important;*/
-  }
+}
 
 .modal-header {
     width: 100% !important;
@@ -598,24 +545,23 @@ button:hover,
 .modal-body {
     width: 560px;
     height: 280px;
-    border: 1px #8B9CC3 solid;
     border-radius: 5px;
     background-color: white;
     padding: 0px !important;
 }
 .modal-body > textarea {
-  display: block;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  font-family: sans-serif;
-  font-size: 18px;
-  appearance: none;
-  box-shadow: none;
-  border-radius: 3px;
-  resize: none;
-  border: 1px solid #365899;
-  padding: 8px 12px;
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 18px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 3px;
+    resize: none;
+    border: 1px solid #365899;
+    padding: 8px 12px;
 }
 .modal-body > textarea:hover {
     outline:none;
@@ -658,7 +604,7 @@ button:hover,
     font-size: 12px;
     padding-left: 5px !important;
     padding-right: 5px !important;
-    background-color: #B71427 !important;
+    background-color: #FFFFFF !important;
 }
 .requestheading>span>i {
     padding-right: 5px !important;
@@ -704,7 +650,7 @@ button:hover,
     color: black !important;
 }
 .modal-footer .input-group {
-   margin-left: 60%;
+    margin-left: 60%;
 
 }
 .modal-footer {

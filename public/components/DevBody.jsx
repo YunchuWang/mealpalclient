@@ -6,7 +6,7 @@ import DevBodyWall from './DevBodyWall.jsx';
 var devbodyStyle = {
     minWidth: '1020px',
     minHeight: '2952px',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#F3FAB6',
     position:'absolute',
     top:'48px',
     bottom: '0px',

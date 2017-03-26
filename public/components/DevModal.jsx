@@ -1,7 +1,6 @@
 import React from 'react';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
-// import Autosuggest from 'react-autosuggest';
-// this class is not used;
+
 import {Modal, Button, OverlayTrigger} from "react-bootstrap";
 class DevModal extends React.Component {
     render() {

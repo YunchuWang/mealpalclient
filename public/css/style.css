@@ -1,3 +1,88 @@
+/* meal request stylings */
+.col-lg-4 {
+    padding-right: 5px !important;
+    padding-left: 4px !important;
+}
+
+/* meal box button x out */
+.modal-header .close {
+  margin-top: 9px;
+      margin-right: 14px;
+
+}
+
+/* meal box button code */
+#butt{
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    width: 100px;
+    height: 33px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 4px;
+}
+
+
+.flat-butt {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-top: 4px;
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 6px;
+  font-family: "Lato", sans-serif;
+  font-size: 16.5px;
+  padding: 12px 20px;
+  border: 0;
+  background: #34495E;
+  color: #FFF;
+  cursor: pointer;
+  outline: 0;
+}
+.flat-butt:hover {
+  background: #005580;
+}
+.flat-primary-butt {
+  background: #1abc9c;
+}
+.flat-primary-butt:hover {
+  background: #2fe2bf;
+}
+.flat-double-butt {
+  padding: 8px 20px;
+  border: 3px solid #FFF;
+  box-shadow: #34495E 0px 0px 0px 3px;
+}
+.flat-double-butt:hover {
+  box-shadow: #005580 0px 0px 0px 3px;
+}
+.flat-primary-double-butt {
+  box-shadow: #1abc9c 0px 0px 0px 3px;
+}
+.flat-primary-double-butt:hover {
+  box-shadow: #2fe2bf 0px 0px 0px 3px;
+}
+
+.btn btn-success{
+
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 4px;
+    text-shadow: 0 0px 0 rgba(0, 0, 0, 0) !important;
+box-shadow: inset 0 0px 0 rgba(255, 255, 255, .15), 0 0px 0px rgba(0, 0, 0, .075) !important;
+
+}
+/* end of meal box button code */
+
+.form-control {
+    /* display: block; */
+    width: 50% !important;
+    width: 100% !important;
+  }
+
+.fade {
+    opacity: 0.91 !important;
+  }
 @media (min-width: 768px) {
     .modal-content {
         box-shadow: inset 0px 1px 5px rgb(183, 36, 36) !important;
@@ -65,7 +150,7 @@ html,body{
     position: absolute;
     top: 121px;
     left: -11px;
-    margin-top: 10px;
+    margin-top: -14px;
     padding: 0px;
     overflow: auto!important;
     height: 2794px;
@@ -509,13 +594,12 @@ button:hover,
     height: 500px !important;
     top: calc(50% - 270px);
 }
+
 .modal-content {
-    height: 500px !important;
-    top: calc(50% - 270px);
     border-radius: 10px !important;
-}
-.modal-content {
+    height: 100% !important;
     position: relative;
+    top: 10vw;
     background-color: #E44424 !important;
     background-clip: padding-box;
     /*border: 1px solid #74AFAD !important;*/
@@ -544,7 +628,7 @@ button:hover,
 }
 .modal-body {
     width: 560px;
-    height: 280px;
+    height: 18%;
     border-radius: 5px;
     background-color: white;
     padding: 0px !important;
@@ -553,7 +637,7 @@ button:hover,
     display: block;
     margin: 0;
     width: 100%;
-    height: 100%;
+    height: 84%;
     font-family: sans-serif;
     font-size: 18px;
     appearance: none;
@@ -569,7 +653,7 @@ button:hover,
 .modal-footer {
     margin-top: 23px;
     width: 560px;
-    height: 130px;
+    height: 92px;
     padding: 0px !important;
 }
 
@@ -587,7 +671,6 @@ button:hover,
     width: 130px;
 }
 .modal-container {
-    position: absolute;
     top:40px;
     width: 100%;
     height: calc(100% - 40px);
@@ -658,8 +741,4 @@ button:hover,
 }
 .modal-footer .col-sm-5 {
     margin-top: 10px;
-}
-.mealrequestmodal {
-    height: 1vw;
-    width: 1vw;
 }

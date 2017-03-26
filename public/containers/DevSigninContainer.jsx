@@ -21,6 +21,7 @@ class DevSigninContainer extends React.Component {
         switch(event.target.id) {
             case 'loginemail':
                 this.setState({email: event.target.value});
+                console.log("asadlk");
                 break;
             case 'loginpass':
                 this.setState({password: event.target.value});
@@ -28,12 +29,12 @@ class DevSigninContainer extends React.Component {
         }
 
     };
-    logIn(event) {
-        event.preventDefault();
+    logIn(values) {
         var _this = this;
-        var email = this.state.email;
-        var password = this.state.password;
-        console.log(this.state.email);
+        this.setState({email: values.email});
+        this.setState({password: values.password});
+        var email = values.email;
+        var password = values.password;
         axios.post(apihost + '/login',{
             password: password,
             email: email
@@ -50,26 +51,26 @@ class DevSigninContainer extends React.Component {
     }
     render() {
         return (
-            <div>
-                <DevSignInForm handleSubmit={this.logIn} emailvalue={this.state.email} password={this.state.password} handleChange={this.handleChange}></DevSignInForm>
-            </div>
-
+            <DevSignInForm mySubmit={this.logIn} emailvalue={this.state.email} password={this.state.password}></DevSignInForm>
         );
     }
 }
 
 const mapStateToProps = state => ({
-    userInfo: state.userInfo
+    userInfo: state.userInfo,
+    form: state.form
 })
 const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(Actions, dispatch)
 })
 DevSigninContainer.propTypes = {
     userInfo: PropTypes.object.isRequired,
+    form: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired
 }
 DevSigninContainer.contextTypes = {
     router: React.PropTypes.object.isRequired
+
 };
 
 

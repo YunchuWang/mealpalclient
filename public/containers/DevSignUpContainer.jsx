@@ -46,13 +46,19 @@ class DevSignUpContainer extends React.Component {
         }
 
     };
-    signUp(event) {
-        event.preventDefault();
-        var email = this.state.email;
-        var password = this.state.password;
-        var firstname = this.state.firstname;
-        var lastname = this.state.lastname;
-        var userid = this.state.userid;
+    signUp(values) {
+        console.log(values);
+        this.setState({email: values.email});
+        this.setState({userid: values.username});
+        this.setState({password: values.password});
+        this.setState({firstname: values.firstname});
+        this.setState({lastname: values.lastname});
+
+        var email = values.email;
+        var password = values.password;
+        var firstname = values.firstname;
+        var lastname = values.lastname;
+        var userid = values.username;
 
         //assign _this to point to DevSignuppage which has context
         var _this = this;
@@ -77,7 +83,7 @@ class DevSignUpContainer extends React.Component {
 
         return (
             <div>
-                <DevSignUpForm onSubmit={this.signUp} emailvalue={this.state.email} password={this.state.password} passwordconfirm={this.state.confirmpassword} firstname={this.state.firstname} lastname={this.state.lastname} username={this.state.userid} handleChange={this.handleChange}></DevSignUpForm>
+                <DevSignUpForm onSubmit={this.signUp} emailvalue={this.state.email} password={this.state.password} passwordconfirm={this.state.confirmpassword} firstname={this.state.firstname} lastname={this.state.lastname} username={this.state.userid}></DevSignUpForm>
             </div>
         );
     }

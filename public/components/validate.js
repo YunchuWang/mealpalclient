@@ -10,15 +10,38 @@ const minValue = min => value =>
     value && value < min ? `Must be at least ${min}` : undefined
 
 exports.validate = (values) => {
-    const errors = {}
-    if (!values.username) {
-        errors.username = 'Required'
-    }
-    if (!values.password) {
-        errors.password = 'Required'
-    }
-    return errors
+  var errors = {};
+  var hasErrors = false;
+
+  if (!values.name || values.name.trim() === '') {
+    errors.name = 'Enter a name';
+    hasErrors = true;
+  }
+  if (!values.username || values.username.trim() === '') {
+    errors.username = 'Enter username';
+    hasErrors = true;
+  }
+  if (!values.email || values.email.trim() === '') {
+    errors.email = 'Enter email';
+    hasErrors = true;
+  }
+  if (!values.password || values.password.trim() === '') {
+    errors.password = 'Enter password';
+    hasErrors = true;
+  }
+  if (!values.confirmPassword || values.confirmPassword.trim() === '') {
+    errors.confirmPassword = 'Enter Confirm Password';
+    hasErrors = true;
+  }
+
+  if (values.confirmPassword && values.confirmPassword.trim() !== '' && values.password && values.password.trim() !== '' && values.password !== values.confirmPassword) {
+    errors.password = 'Password And Confirm Password don\'t match';
+    errors.password = 'Password And Confirm Password don\'t match';
+    hasErrors = true;
+  }
+  return hasErrors && errors;
 }
+
 
 exports.email = (value) => {
     value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ?
@@ -46,7 +69,7 @@ exports.renderField = ({ input, label, type, value,handleChange,idval, meta: { t
     <div>
         <label>{label}</label>
         <div>
-            <input id={idval} {...input} placeholder={label} type={type} value={value} onChange={handleChange}/>
+            <input id={idval} {...input} placeholder={label} type={type} value={value}/>
             {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
         </div>
     </div>

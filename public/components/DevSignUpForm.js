@@ -5,38 +5,35 @@ import {email,renderField,aol,required,maxLength15,validate} from './validate';
 
 
 const DevSignUpForm = (props) => {
-    const { onSubmit,pristine,submitting,handleSubmit, handleChange, emailvalue, password, firstname, lastname,username,passwordconfirm } = props
+    const { onSubmit,pristine,submitting,handleSubmit, emailvalue, password, firstname, lastname,username,passwordconfirm } = props
+
     return (
         <form className="login signup" onSubmit={handleSubmit(onSubmit)} >
-            <Field idval="firstname" name="firstname" type="text"
+            <Field name="firstname" type="text"
                    component={renderField} label="First Name"
                    value={firstname} validate={required}
-                   handleChange={handleChange}
             />
-            <Field idval="lastname" name="lastname" type="text"
+            <Field name="lastname" type="text"
                    component={renderField} label="Last Name"
                    value={lastname} validate={required}
-                   handleChange={handleChange}
             />
-            <Field idval="signemail" name="email" type="email"
+            <Field  name="email" type="email"
                    component={renderField} label="Email"
                    validate={required} value={emailvalue}
-                   warn={aol} handleChange={handleChange}
+                   warn={aol}
             />
-            <Field idval="signid" name="email" type="text"
+            <Field name="username" type="text"
                    component={renderField} label="User Id"
                    value={username}
-                   validate={required} handleChange={handleChange}
+                   validate={required}
             />
-            <Field idval="signpass" name="password" type="password"
+            <Field  name="password" type="password"
                    component={renderField} label="Password"
                    value={password} validate={required}
-                   handleChange={handleChange}
             />
-            <Field idval="signpasscon" name="password" type="password"
+            <Field  name="confirmpassword" type="password"
                    component={renderField} label="Confirm Password"
                    value={passwordconfirm} validate={required}
-                   handleChange={handleChange}
             />
             <button type="submit" className="signupbutton" >Sign up</button>
         </form>
@@ -45,5 +42,5 @@ const DevSignUpForm = (props) => {
 
 export default reduxForm({
     form: 'devSignUpForm',
-    validate // a unique identifier for this form
+    validate
 })(DevSignUpForm)

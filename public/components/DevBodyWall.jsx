@@ -4,8 +4,6 @@ import "../css/style.css";
 import "../css/bootstrap-theme.css";
 import "../css/bootstrap-theme.min.css";
 import DevRequest from "./DevRequest.jsx";
-// import axios from "axios";
-// import {Modal, Button, OverlayTrigger} from "react-bootstrap";
 import DevModal from './DevModal'
 import axios from 'axios';
 import {apihost} from '../constants/global';
@@ -94,6 +92,7 @@ class DevBodyWall extends React.Component {
                     {DevReq}
                 </div>
                 <DevModal dvalue={this.state.dvalue} avvalue={this.state.avvalue} lvalue={this.state.lvalue} showModal={this.props.showModal} onHide={this.close} onSubmit={this.addRequest} onChange={this.handleChange}/>
+
             </div>
 
         );

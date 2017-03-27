@@ -9,9 +9,10 @@ import { Router, Route, hashHistory } from 'react-router';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from '../public/reducers/index';
 import {Provider} from 'react-redux';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 var thunkMiddleware = function ({ dispatch, getState }) {
-    // console.log('Enter thunkMiddleware');
+
     return function(next) {
 
         return function (action) {
@@ -31,16 +32,17 @@ let store = finalCreateStore(rootReducer)
 
 
 ReactDOM.render((
-        <Provider store={store}>
-            <Router history={hashHistory}>
-                <Route path="/" component={Project} />
-                <Route path="/DevMain" component={DevMain} />
-                <Route path="/DevSignup" component={DevSignup}>
-                    <Route path="/DevSignUpContainer" component={DevSignUpContainer} />
-                    <Route path="/DevSigninContainer" component={DevSigninContainer} />
-                </Route>
-            </Router>
-        </Provider>
-
+        <MuiThemeProvider>
+            <Provider store={store}>
+                <Router history={hashHistory}>
+                    <Route path="/" component={Project} />
+                    <Route path="/DevMain" component={DevMain} />
+                    <Route path="/DevSignup" component={DevSignup}>
+                        <Route path="/DevSignUpContainer" component={DevSignUpContainer} />
+                        <Route path="/DevSigninContainer" component={DevSigninContainer} />
+                    </Route>
+                </Router>
+            </Provider>
+        </MuiThemeProvider>
     )
     , document.getElementById('app'));

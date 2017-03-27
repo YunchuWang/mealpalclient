@@ -15,9 +15,9 @@ class DevModal extends React.Component {
                             <textarea rows="4" cols="10" placeholder="Eat me please..." id="description" onChange={this.props.onChange} value={this.props.dvalue} required></textarea>
                         </Modal.Body>
                         <Modal.Footer className="modal-footer">
-                          <div class="row control-group">
+                            <div class="row control-group">
 
-                            <div className="form-group col-xs-4 col-sm-4 floating-label-form-group controls">
+                                <div className="form-group col-xs-4 col-sm-4 floating-label-form-group controls">
                                     <input type = "text" className="form-control" id="availtime" onChange={this.props.onChange} placeholder="Available Time" value={this.props.avvalue} required>
                                     </input>
                                 </div>
@@ -26,9 +26,8 @@ class DevModal extends React.Component {
                                     </input>
                                 </div>
                                 <div className="form-group col-xs-4 col-sm-4 floating-label-form-group controls">
-
-                                <button type="submit" id="butt" className="flat-butt flat-primary-butt flat-double-butt flat-primary-double-butt"><center>Send</center></button>
-                               </div>
+                                    <button type="submit" id="butt" className="flat-butt flat-primary-butt flat-double-butt flat-primary-double-butt"><center>Send</center></button>
+                                </div>
                             </div>
 
                         </Modal.Footer>

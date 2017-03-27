@@ -3,7 +3,6 @@ import { Field, reduxForm } from 'redux-form'
 import {email,renderField,aol,required,maxLength15,validate} from './validate';
 
 
-
 const DevSignUpForm = (props) => {
     const { onSubmit,pristine,submitting,handleSubmit, emailvalue, password, firstname, lastname,username,passwordconfirm } = props
 

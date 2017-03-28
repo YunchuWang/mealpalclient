@@ -14,8 +14,6 @@ class DevSignUpContainer extends React.Component {
         this.state = {
             userid: '',
             email: '',
-            firstname: '',
-            lastname: '',
             password:'',
             confirmpassword:''
 
@@ -35,12 +33,6 @@ class DevSignUpContainer extends React.Component {
             case 'signpass':
                 this.setState({password: event.target.value});
                 break;
-            case 'firstname':
-                this.setState({firstname: event.target.value});
-                break;
-            case 'lastname':
-                this.setState({lastname: event.target.value});
-                break;
             case 'signpasscon':
                 this.setState({confirmpassword: event.target.value});
         }
@@ -51,13 +43,9 @@ class DevSignUpContainer extends React.Component {
         this.setState({email: values.email});
         this.setState({userid: values.username});
         this.setState({password: values.password});
-        this.setState({firstname: values.firstname});
-        this.setState({lastname: values.lastname});
 
         var email = values.email;
         var password = values.password;
-        var firstname = values.firstname;
-        var lastname = values.lastname;
         var userid = values.username;
 
         //assign _this to point to DevSignuppage which has context
@@ -65,9 +53,7 @@ class DevSignUpContainer extends React.Component {
         axios.post(apihost + '/signup',{
             username: userid,
             password: password,
-            email: email,
-            firstname: firstname,
-            lastname: lastname
+            email: email
         }).then(function (response) {
             console.log(response);
             if(response.data.status === "pass") {
@@ -77,13 +63,13 @@ class DevSignUpContainer extends React.Component {
             console.log(error);
         });
 
-        this.props.actions.signup(userid,password,email,firstname,lastname);
+        this.props.actions.signup(userid,password,email);
     }
     render() {
 
         return (
             <div>
-                <DevSignUpForm onSubmit={this.signUp} emailvalue={this.state.email} password={this.state.password} passwordconfirm={this.state.confirmpassword} firstname={this.state.firstname} lastname={this.state.lastname} username={this.state.userid}></DevSignUpForm>
+                <DevSignUpForm onSubmit={this.signUp} emailvalue={this.state.email} password={this.state.password} passwordconfirm={this.state.confirmpassword}  username={this.state.userid}></DevSignUpForm>
             </div>
         );
     }

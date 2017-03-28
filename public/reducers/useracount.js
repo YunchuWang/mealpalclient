@@ -6,8 +6,6 @@ import { SIGN_UP, USER_LOGIN, USER_LOGOUT } from '../constants/ActionTypes'
 
 const initialState =
     {
-        firstname: '',
-        lastname: '',
         password: '',
         email: '',
         username: ''
@@ -19,8 +17,6 @@ export default function requesttoggle(state = initialState, action) {
         case SIGN_UP:
             return {
                 username: action.username,
-                firstname: action.firstname,
-                lastname: action.lastname,
                 password: action.password,
                 email: action.email
             };

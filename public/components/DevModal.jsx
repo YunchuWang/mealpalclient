@@ -2,6 +2,10 @@
 
 import React from 'react';
 import {Modal, Button, OverlayTrigger} from "react-bootstrap";
+import DatePicker from 'material-ui/DatePicker';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+// injectTapEventPlugin();
+
 class DevModal extends React.Component {
     render() {
         return (
@@ -18,8 +22,8 @@ class DevModal extends React.Component {
                             <div class="row control-group">
 
                                 <div className="form-group col-xs-4 col-sm-4 floating-label-form-group controls">
-                                    <input type = "text" className="form-control" id="availtime" onChange={this.props.onChange} placeholder="Available Time" value={this.props.avvalue} required>
-                                    </input>
+                                    <DatePicker type = "text" className="form-control" id="availtime" onChange={this.props.onChange} placeholder="Available Time" value={this.props.avvalue} required>
+                                    </DatePicker>
                                 </div>
                                 <div className="form-group col-xs-4 col-sm-4 floating-label-form-group controls">
                                     <input type = "text" className = "form-control" id="location" onChange={this.props.onChange} placeholder="Location" value={this.props.lvalue} required>

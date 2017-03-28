@@ -1,21 +1,33 @@
 @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
-
-#eww{
-	overflow:auto;
-	height: 185px;
-	 overflow-x:hidden;
-	  overflow-y:hidden;
-	::-webkit-scrollbar {
-    display: none;
+.login .signupbutton {
+    width: 260px;
+    height: 35px !important;
+    background: #529ECC;
+    border: 1px solid #529ECC;
+    margin-top: 30px !important;
+    text-align: center;
 }
+#logger{
+    margin-top: 1px !important;
+		    margin-left: -2px;
+}
+#regis{
+	margin-top: -16px !important;
+	    margin-left: -2px;
+}
+
+::-webkit-scrollbar {
+					 display: none;
+					 max-width: 600px;
+			 }
+#eww{
+	height: 185px;
+
 
 }
 #peskybutt{
-margin-top:5px;
-clear: both;
-margin-left:-3px
 }
 .signupstyle{
 	font-family: Arial;
@@ -61,7 +73,7 @@ margin-left:-3px
 	position: absolute;
 top: calc(50% - 75px);
 left: calc(50% - 50px);
-height: 300px;
+height:  284px;
 width: 275px;
 padding: 10px;
 z-index: 2;
@@ -72,12 +84,18 @@ overflow: hidden;
 
 .signup {
 	position: absolute;
-	top: 117px !important;
+	top: 160px !important;
 	left: calc(50% - 50px);
-	height: 600px ;
-	width: 350px ;
-	padding: 10px;
+	height: 400px;
+	width: 286px;
+	padding: 15px;
 	z-index: 2;
+	overflow-x:hidden;
+overflow-y: scroll;
+
+}
+.button.signupbutton{
+	clear:both;
 }
 
 .login input[type=text]{

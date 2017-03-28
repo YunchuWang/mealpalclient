@@ -15,18 +15,16 @@ class DevSignInForm extends React.Component {
                 <div id="eww">
                     <Field  name="email"
                             component={renderField} label="Email"
-
                     />
                     <Field name="password" type="password"
                            component={renderField} label="Password"
+
                     />
                 </div>
-                <div id ="peskybutt">
                     <Link to="/DevSignUpContainer">
-                        <input type="button" value="Get Started" className="signupbutton" />
+                        <input type="button" id = "regis" value="Get Started" className="signupbutton" />
                     </Link>
-                    <button type ="submit" className = "signupbutton" >Log In</button>
-                </div>
+                    <button type ="submit" id = "logger" className = "signupbutton" >Log In</button>
             </form>
         )
     }

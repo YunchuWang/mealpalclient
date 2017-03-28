@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import {email,renderField,aol,required,maxLength15,validate} from './validate';
+import {renderField,required,maxLength15,validateSignUp} from './validate';
 
 
 const DevSignUpForm = (props) => {
@@ -8,31 +8,30 @@ const DevSignUpForm = (props) => {
 
     return (
         <form className="login signup" onSubmit={handleSubmit(onSubmit)} >
-            <Field name="firstname" type="text"
+            <Field name="firstname"
                    component={renderField} label="First Name"
-                   value={firstname} validate={required}
+
             />
-            <Field name="lastname" type="text"
+            <Field name="lastname"
                    component={renderField} label="Last Name"
-                   value={lastname} validate={required}
+
             />
-            <Field  name="email" type="email"
+            <Field  name="email"
                    component={renderField} label="Email"
-                   validate={required} value={emailvalue}
-                   warn={aol}
+
+
             />
-            <Field name="username" type="text"
+            <Field name="username"
                    component={renderField} label="User Id"
-                   value={username}
-                   validate={required}
+
+
             />
-            <Field  name="password" type="password"
+            <Field  name="password"
                    component={renderField} label="Password"
-                   value={password} validate={required}
+
             />
-            <Field  name="confirmpassword" type="password"
+            <Field  name="confirmpassword"
                    component={renderField} label="Confirm Password"
-                   value={passwordconfirm} validate={required}
             />
             <button type="submit" className="signupbutton" >Sign up</button>
         </form>
@@ -41,5 +40,5 @@ const DevSignUpForm = (props) => {
 
 export default reduxForm({
     form: 'devSignUpForm',
-    validate
+    validate: validateSignUp
 })(DevSignUpForm)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import {renderField,required,maxLength15,validateSignUp} from './validate';
+import {renderField,validateSignUp} from './validate';
 
 
 const DevSignUpForm = (props) => {
@@ -26,11 +26,11 @@ const DevSignUpForm = (props) => {
 
 
             />
-            <Field  name="password"
+            <Field  name="password" type="password"
                    component={renderField} label="Password"
 
             />
-            <Field  name="confirmpassword"
+            <Field  name="confirmpassword" type="password"
                    component={renderField} label="Confirm Password"
             />
             <button type="submit" className="signupbutton" >Sign up</button>

@@ -2,10 +2,25 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
 
+#eww{
+	overflow:auto;
+	height: 185px;
+	 overflow-x:hidden;
+	  overflow-y:hidden;
+	::-webkit-scrollbar {
+    display: none;
+}
+
+}
+#peskybutt{
+margin-top:5px;
+clear: both;
+margin-left:-3px
+}
 .signupstyle{
 	font-family: Arial;
 	font-size: 12px;
-	background: #fff;
+	background: #eee;
 	color: #fff;
 }
 
@@ -44,19 +59,22 @@
 
 .login{
 	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(50% - 50px);
-	height: 150px ;
-	width: 350px ;
-	padding: 10px;
-	z-index: 2;
+top: calc(50% - 75px);
+left: calc(50% - 50px);
+height: 300px;
+width: 275px;
+padding: 10px;
+z-index: 2;
+background: #eee;
+border-radius: 16px;
+overflow: hidden;
 }
 
 .signup {
 	position: absolute;
-	top: calc(50% - 150px) !important;
+	top: 117px !important;
 	left: calc(50% - 50px);
-	height: 150px ;
+	height: 600px ;
 	width: 350px ;
 	padding: 10px;
 	z-index: 2;
@@ -65,10 +83,10 @@
 .login input[type=text]{
 	width: 250px;
 	height: 40px;
-	background: transparent;
+	background: #fff;
 	border: 1px solid rgba(255,255,255,0.6);
 	border-radius: 2px;
-	color: #fff;
+	color: #000;
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -109,7 +127,7 @@
 
 
 .login .loginbutton {
-	width: 250px;
+	width: 260px;
 	height: 35px !important;
 	background: #fff;
 	border: 1px solid #fff;
@@ -124,7 +142,7 @@
 }
 
 .login .signupbutton {
-	width: 250px;
+	width: 260px;
 	height: 35px !important;
 	background: #529ECC;
 	border: 1px solid #529ECC;
@@ -134,7 +152,7 @@
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	margin-top: 10px;
+	margin-top: 2px;
 	text-align: center;
 
 }
@@ -201,5 +219,3 @@ html,body
 	background-size: cover;
 	z-index: 1;
 }
-
-

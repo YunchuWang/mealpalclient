@@ -36,6 +36,7 @@ class DevBodyWall extends React.Component {
         switch(event.target.id) {
             case 'availtime':
                 this.setState({avvalue: event.target.value});
+
                 break;
             case 'location':
                 this.setState({lvalue: event.target.value});

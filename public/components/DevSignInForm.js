@@ -11,7 +11,7 @@ class DevSignInForm extends React.Component {
     }
     render() {
         return (
-            <form className="login" onSubmit={this.props.handleSubmit(this.props.mySubmit)}>
+            <form className="login" onSubmit={this.props.handleSubmit(this.props.mySubmit)} autocomplete="off">
                 <div id="eww">
                     <Field  name="email"
                             component={renderField} label="Email"
@@ -21,10 +21,7 @@ class DevSignInForm extends React.Component {
 
                     />
                 </div>
-                    <Link to="/DevSignUpContainer">
-                        <input type="button" id = "regis" value="Get Started" className="signupbutton" />
-                    </Link>
-                    <button type ="submit" id = "logger" className = "signupbutton" >Log In</button>
+                <button type ="submit" id = "logger" className = "signupbutton" >Log In</button>
             </form>
         )
     }
@@ -39,3 +36,7 @@ export default reduxForm({
     form: 'devSignInForm',
     validate: validateLogIn
 })(DevSignInForm)
+
+// <Link to="/DevSignUpContainer">
+//     <input type="button" id = "regis" value="Get Started" className="signupbutton" />
+// </Link>

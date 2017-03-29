@@ -7,8 +7,7 @@ const DevSignUpForm = (props) => {
     const { onSubmit,handleSubmit } = props
 
     return (
-        <form className="login signup" onSubmit={handleSubmit(onSubmit)} >
-
+        <form className="login signup" onSubmit={handleSubmit(onSubmit)} autocomplete="off">
             <Field  name="email"
                     component={renderField} label="Email"
             />

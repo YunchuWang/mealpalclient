@@ -16,19 +16,12 @@ class Project extends React.Component {
 
     render() {
         return (
-
-
+            <div>
                 <DevSignup>
-                    <Tabs className="tabs"
-                    >
-                        <Tab label="Log In" value="login" buttonStyle={logintabstyle} inkBarStyle={{backgroundColor:"#FFC107", zIndex:4,color:'rgba(255, 255, 255, 0)'}}>
-                            <DevSigninContainer></DevSigninContainer>
-                        </Tab>
-                        <Tab label="Sign Up" value="signup" buttonStyle={signuptabstyle} inkBarStyle={{backgroundColor:"#FFC107", zIndex:4,color:'rgba(255, 255, 255, 0)'}}>
-                            <DevSignUpContainer></DevSignUpContainer>
-                        </Tab>
-                    </Tabs>
+                    <DevSigninContainer></DevSigninContainer>
                 </DevSignup>
+            </div>
+
 
         )
     }

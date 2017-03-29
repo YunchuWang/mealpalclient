@@ -1,7 +1,7 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import {renderField,validateSignUp} from './validate';
-
+import {Link } from 'react-router';
 
 const DevSignUpForm = (props) => {
     const { onSubmit,handleSubmit } = props
@@ -28,7 +28,10 @@ const DevSignUpForm = (props) => {
                     component={renderField} label="Confirm Password"
             />
             <br />
-            <button type="submit" className="signupbutton" >Sign up</button>
+            <button type="submit" className="signupbutton" id="signupbut">Sign up</button>
+            <Link to="/">
+                <button type="button" className="signupbutton" id="logButtons" >Back</button>
+            </Link>
         </form>
     )
 }

@@ -62,14 +62,14 @@
 
 .header div{
 	float: left;
-	color: #f57d00 !important;
+	color: #f7f7f9 !important;
 	font-family: 'Exo', sans-serif;
 	font-size: 35px;
-	font-weight: 200;
+	font-weight: 300;
 }
 
 .header div span{
-	color: #bd081c !important;
+	color: #131418 !important;
 	font-weight: 500;
 }
 

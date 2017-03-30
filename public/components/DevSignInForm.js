@@ -19,6 +19,7 @@ class DevSignInForm extends React.Component {
                     <Field name="password" type="password"
                            component={renderField} label="Password"
                     />
+                    <Link to="/DevForgotPasswordContainer" className="forgotpasswordtext">Forgot password?</Link>
                 </div>
                 <Link to="/DevSignUpContainer">
                     <button type ="button" id="logButtons" className = "signupbutton">

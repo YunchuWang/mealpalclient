@@ -731,6 +731,7 @@ button:hover,
     float: right !important;
     margin-right: 0px !important;
 }
+
 .signbutton {
     z-index: 100;
     position: absolute;

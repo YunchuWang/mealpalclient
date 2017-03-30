@@ -5,11 +5,7 @@ import React from 'react';
 import TextField from 'material-ui/TextField';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
-// const maxLength = max => value =>
-//     value && value.length > max ? `Must be ${max} characters or less` : undefined
-//
-// const minValue = min => value =>
-//     value && value < min ? `Must be at least ${min}` : undefined
+
 exports.validateLogIn = (values) => {
     const errors = {}
     const requiredFields = [ 'email','password' ]
@@ -43,8 +39,8 @@ exports.validateSignUp = (values) => {
     if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.unc\.edu$/i.test(values.email)) {
         errors.email = 'Invalid. Email needs to end with unc.edu'
     }
-    if (values.password && !/^(?=.*\d).{4,15}$/.test(values.password)) {
-        errors.password = 'Enter 4-15 digits with at least one numeric digit.'
+    if (values.password && !/.{4,15}$/.test(values.password)) {
+        errors.password = 'Enter 4-15 digits.'
     }
     return errors;
     // return hasErrors && errors;
@@ -57,11 +53,4 @@ exports.renderField = ({ input, label, meta: { touched, error }, ...custom }) =>
                {...input}
                {...custom} autoComplete="aksldjlsakjdl"
     />
-    // <div>
-    //   <label>{label}</label>
-    //   <div>
-    //     <input id={idval} {...input} placeholder={label} type={type} value={value}/>
-    //       {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
-    //   </div>
-    // </div>
 )

@@ -7,6 +7,7 @@ import DevRequest from "./DevRequest.jsx";
 import DevModal from './DevModal'
 import axios from 'axios';
 import {apihost} from '../constants/global';
+import moment from 'moment';
 
 class DevBodyWall extends React.Component {
     constructor(props,context){
@@ -14,16 +15,25 @@ class DevBodyWall extends React.Component {
         this.state = {
             dvalue: '',
             svalue:'',
-            avvalue:'',
+            date:null,
+            time: null,
             lvalue:''
         };
         this.addRequest = this.addRequest.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.handleDate = this.handleDate.bind(this);
+        this.handleTime = this.handleTime.bind(this);
         this.close = this.close.bind(this);
         this.open = this.open.bind(this);
     };
 
+    handleDate(event,date) {
+        this.setState({date: date});
+    };
 
+    handleTime(event,time) {
+        this.setState({time: time});
+    };
     close() {
         this.props.actions.hideWriteRequest();
     };
@@ -34,10 +44,6 @@ class DevBodyWall extends React.Component {
 
     handleChange(event) {
         switch(event.target.id) {
-            case 'availtime':
-                this.setState({avvalue: event.target.value});
-
-                break;
             case 'location':
                 this.setState({lvalue: event.target.value});
                 break;
@@ -47,10 +53,21 @@ class DevBodyWall extends React.Component {
         }
     };
     addRequest(e) {
-        var newrequest = {
+
+        let momentTime = moment(this.state.time);
+        let momentDate = moment(this.state.date);
+        let renderedDateTime = moment({
+            year: momentDate.year(),
+            month: momentDate.month(),
+            day: momentDate.date(),
+            hour: momentTime.hours(),
+            minute: momentTime.minutes()
+        });
+        console.log(renderedDateTime)
+        const newrequest = {
             key: Date(),
             description: this.state.dvalue,
-            availtime: this.state.avvalue,
+            availtime: renderedDateTime,
             location: this.state.lvalue
         }
         var _this = this;
@@ -75,7 +92,8 @@ class DevBodyWall extends React.Component {
 
         this.setState ({
             dvalue: '',
-            avvalue:'',
+            date:null,
+            time: null,
             lvalue:''
         }) ;
         e.preventDefault();
@@ -92,7 +110,7 @@ class DevBodyWall extends React.Component {
                 <div className="container-fluid">
                     {DevReq}
                 </div>
-                <DevModal dvalue={this.state.dvalue} avvalue={this.state.avvalue} lvalue={this.state.lvalue} showModal={this.props.showModal} onHide={this.close} onSubmit={this.addRequest} onChange={this.handleChange}/>
+                <DevModal dvalue={this.state.dvalue} date={this.state.date} time={this.state.time} lvalue={this.state.lvalue} showModal={this.props.showModal} onHide={this.close} onSubmit={this.addRequest} onDateChange={this.handleDate} onTimeChange={this.handleTime} onChange={this.handleChange}/>
 
             </div>
 

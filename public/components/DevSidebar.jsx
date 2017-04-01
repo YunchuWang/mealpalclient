@@ -4,6 +4,10 @@ import '../css/bootstrap-theme.css';
 import '../css/bootstrap.css';
 import '../css/bootstrap.min.css';
 import profile from '../img/profile.jpg';
+import Paper from 'material-ui/Paper';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/MenuItem';
+import Divider from 'material-ui/Divider';
 var classNames = require('classnames');
 const DevSidebarList = (props) => (
 
@@ -52,7 +56,6 @@ const DevSidebar = () => (
             <li className="sideheader">
                 <span></span>
             </li>
-
             <DevSidebarList listname="Flash Dining" idname="flashdining" styleclassName="glyphicon-flash" listitems={['home','news','contact']}></DevSidebarList>
             <DevSidebarList listname="Meal Friends" idname="mealfriends" styleclassName="glyphicon-sunglasses" listitems={['home','news','contact']}></DevSidebarList>
             <DevSidebarList listname="Meal Groups" idname="mealgroups" styleclassName="glyphicon-tree-conifer" listitems={['home','news','contact']}></DevSidebarList>

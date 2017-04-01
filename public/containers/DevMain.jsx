@@ -8,8 +8,15 @@ import {connect} from 'react-redux';
 import * as Actions from '../actions'
 import axios from 'axios';
 import {apihost} from '../constants/global';
+// import Pusher from 'pusher';
+import Pusher from 'pusher-js';
 
+var pusher, channel;
 class DevMain extends React.Component {
+    constructor(props){
+        super(props);
+        this.getPost = this.getPost.bind(this);
+    };
     componentWillMount() {
         var _this = this;
         axios.get(apihost + '/login').then(function(response){
@@ -17,7 +24,6 @@ class DevMain extends React.Component {
                 _this.context.router.push('/');
             } else {
                 axios.get(apihost + '/post').then(function (response) {
-                    console.log(response.locals);
                     if(response.data.status === "fail") {
                         _this.context.router.push('/');
                     } else {
@@ -31,6 +37,34 @@ class DevMain extends React.Component {
             console.log(error);
         });
 
+    };
+    componentDidMount() {
+        var _this = this;
+        pusher = new Pusher('dbcd20122522e32d0f31', {
+            encrypted: true
+        });
+
+        channel = pusher.subscribe('request-channel');
+        channel.bind('request-event', function(data) {
+            if(data.message === "update") {
+                _this.getPost();
+            }
+        });
+    };
+    componentWillUnmount() {
+        pusher.unsubscribe();
+    };
+    getPost() {
+        var _this = this;
+        axios.get(apihost + '/post').then(function (response) {
+            if(response.data.status === "fail") {
+                _this.context.router.push('/');
+            } else {
+                _this.props.actions.getRequests(response.data.content,response.data.length);
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
     }
     logOut(event) {
         event.preventDefault();

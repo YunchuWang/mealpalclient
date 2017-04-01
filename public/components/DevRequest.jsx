@@ -6,19 +6,12 @@ var timeagostyle = {
     color: '#808080'
 }
 class DevRequest extends React.Component {
-    // constructor(props){
-    //     super(props);
-    // };
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     return this.props.count !== nextProps.count;
-    // };
 
     render() {
         var requests = this.props.requestinfo.map(function(request){
                 var onerowrequests = request.map(
                     function(onerequest) {
                         return (
-                            //Issue: create api to make unique key for each request.
                             <div className="col-lg-4" key={onerequest.key}>
                                 <div className="panel requestpanel">
                                     <div className="panel-heading requestheading">

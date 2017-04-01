@@ -28,18 +28,14 @@ input:-webkit-autofill {
     padding-top: 0px !important;
     width: 100px;
     height: 33px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin-top: 4px;
+    margin-right: 2px;
+    margin-top: 10px;
 }
 
 
 .flat-butt {
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin-top: 4px;
+    /*margin-top: 4px;*/
     display: inline-block;
-    margin: 0 5px;
     border-radius: 6px;
     font-family: "Lato", sans-serif;
     font-size: 16.5px;
@@ -54,10 +50,10 @@ input:-webkit-autofill {
     background: #005580;
 }
 .flat-primary-butt {
-    background: #1abc9c;
+    background: #EC5E6C;
 }
 .flat-primary-butt:hover {
-    background: #2fe2bf;
+    background: #FE4D53;
 }
 .flat-double-butt {
     padding: 8px 20px;
@@ -68,10 +64,10 @@ input:-webkit-autofill {
     box-shadow: #005580 0px 0px 0px 3px;
 }
 .flat-primary-double-butt {
-    box-shadow: #1abc9c 0px 0px 0px 3px;
+    box-shadow: #EC5E6C 0px 0px 0px 3px;
 }
 .flat-primary-double-butt:hover {
-    box-shadow: #2fe2bf 0px 0px 0px 3px;
+    box-shadow: #FE4D53 0px 0px 0px 3px;
 }
 
 .btn btn-success{
@@ -147,7 +143,7 @@ html,body{
     min-width: 260px;
     min-height: 2952px;
     height:100%;
-    background-color: #F3FAB6;
+    background-color: #A7779F;
     top:48px;
     bottom: 0px;
     left:0;
@@ -159,19 +155,21 @@ html,body{
 .DevBodyGrids {
     width: 100%;
     position: absolute;
-    top: 121px;
-    left: -11px;
-    margin-top: -14px;
+    top: 93px;
+    left: 0px;
+
     padding: 0px;
     overflow: auto!important;
     height: 2794px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+   /*-webkit-justify-content: flex-start;*/
+   /*justify-content: flex-start;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-around;*/
 
 }
-.whitegrid {
-    /*    background-color: white;*/
-    margin-bottom: 20px;
-    /*    color: #333;*/
-}
+
 
 .sidebar-header {
     width:78px;
@@ -539,7 +537,7 @@ html,body{
 .heading-button {
     width: 90px;
     height: 63px;
-    background-color:#F3FAB6 !important;
+    background-color:#A7779F !important;
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -581,7 +579,7 @@ button:hover,
 .devbodymainnavStyle {
     width: 100%;
     height: 93px;
-    background-color: #F3FAB6;
+    background-color: #A7779F;
     position:absolute;
     top: 0px;
     left: 0px;
@@ -659,38 +657,28 @@ button:hover,
     outline:none;
 }
 .modal-footer {
-    margin-top: 23px;
     width: 560px;
     height: 92px;
     padding: 0px !important;
+    border: none !important;
+    margin: 0px;
+
 }
 
-.modal-footer .input-group {
-    padding: 0px !important;
-
-    margin-bottom: 12px !important;
-    width: 130px !important;
-    clear: both !important;
-}
 .input-group-addon{
     width:30px !important;
 }
-.modal-footer .input-group input{
-    width: 130px;
-}
+
 .modal-container {
     top:40px;
     width: 100%;
     height: calc(100% - 40px);
     margin: 0px;
     padding: 20px !important;
-    background-color: #F6F6F6 !important;
+    background-color: #F7F7EB !important;
     border-radius: 0px 0px 10px 10px !important;
 }
-.col-sm-5:first-child {
-    padding: 0px !important;
-    margin-right: 10px;
-}
+
 .requestheading {
     font-size: 12px;
     padding-left: 5px !important;
@@ -741,13 +729,21 @@ button:hover,
 #myModal {
     color: black !important;
 }
-.modal-footer .input-group {
-    margin-left: 60%;
-
+.mealModalTime {
+    padding: 0px !important;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
 }
-.modal-footer {
-    border: none !important;
-}
-.modal-footer .col-sm-5 {
-    margin-top: 10px;
+.mealModalOthers {
+    padding: 0px !important;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
 }

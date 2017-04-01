@@ -63,7 +63,6 @@ class DevBodyWall extends React.Component {
             hour: momentTime.hours(),
             minute: momentTime.minutes()
         });
-        console.log(renderedDateTime)
         const newrequest = {
             key: Date(),
             description: this.state.dvalue,
@@ -76,15 +75,6 @@ class DevBodyWall extends React.Component {
             if(res.data.status === 'fail') {
                 _this.context.router.push('/');
             } else {
-                axios.get(apihost + '/post').then(function (response) {
-                    if(response.data.status === "fail") {
-                        _this.context.router.push('/');
-                    } else {
-                        _this.props.actions.getRequests(response.data.content,response.data.length);
-                    }
-                }).catch(function (error) {
-                    console.log(error);
-                });
             }
         }).catch(function (error) {
             console.log(error);

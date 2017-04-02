@@ -1,4 +1,3 @@
-
 import React from 'react';
 import '../css/bootstrap-theme.css';
 import '../css/bootstrap.css';
@@ -8,6 +7,14 @@ import Paper from 'material-ui/Paper';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
+import {List, ListItem} from 'material-ui/List';
+import ContentInbox from 'material-ui/svg-icons/content/inbox';
+import ActionGrade from 'material-ui/svg-icons/action/grade';
+import ContentSend from 'material-ui/svg-icons/content/send';
+import ContentDrafts from 'material-ui/svg-icons/content/drafts';
+import ActionInfo from 'material-ui/svg-icons/action/info';
+
+
 var classNames = require('classnames');
 const DevSidebarList = (props) => (
 
@@ -33,37 +40,63 @@ const DevSidebarList = (props) => (
 const DevSidebar = () => (
 
     <div className="sidebarStyle">
-        <div className="sidebar-header">
-            <div className="category-content">
-                <div className="media">
-                    <a className="media-left" href="#">
-                        <img className="media-object" src={profile} alt="Generic placeholder image" />
-                    </a>
-                    <div className="media-body" >
-                        <h5 className="media-heading" id= "black">Peter Wang</h5>
-                        <i className="glyphicon glyphicon-map-marker"></i>
-                        Durham, NC
-                    </div>
-                    <div className="media-right">
-                        <a href="#">
-                            <i className="glyphicon glyphicon-cog"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <ul className="sidebar-nav">
-            <li className="sideheader">
-                <span></span>
-            </li>
-            <DevSidebarList listname="Flash Dining" idname="flashdining" styleclassName="glyphicon-flash" listitems={['home','news','contact']}></DevSidebarList>
-            <DevSidebarList listname="Meal Friends" idname="mealfriends" styleclassName="glyphicon-sunglasses" listitems={['home','news','contact']}></DevSidebarList>
-            <DevSidebarList listname="Meal Groups" idname="mealgroups" styleclassName="glyphicon-tree-conifer" listitems={['home','news','contact']}></DevSidebarList>
-            <DevSidebarList listname="Memories" idname="memories" styleclassName="glyphicon-heart" listitems={['home','news','contact']}></DevSidebarList>
+        <ul className="sidebar-nav" id = "sidenav" >
+            <a>
+                <List>
+                    <Paper>
+                        <ListItem class="collection-item avatar">
+                            <div className="category-content">
+                                <div className="media">
+                                    <a className="media-left" href="#">
+                                        <img className="media-object" src={profile} alt="Generic placeholder image" />
+                                    </a>
+                                    <div className="media-body" >
+                                        <h5 className="media-heading" id= "black">Peter Wang</h5>
+                                        <i className="glyphicon glyphicon-map-marker"></i>
+                                        Durham, NC
+                                    </div>
+                                    <div className="media-right">
+                                        <a href="#">
+                                            <i className="glyphicon glyphicon-cog"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </ListItem>
+                        <Divider />
+                        <ListItem primaryText="Flash Dining"  idname="flashdining" leftIcon={<ContentInbox />} />
+                        <ListItem primaryText="Meal Friends" idname="mealfriends" leftIcon={<ActionGrade />} />
+                        <ListItem primaryText="Meal Groups" idname="mealgroups" leftIcon={<ContentSend />} />
+                        <ListItem primaryText="Memories" idname="memories" leftIcon={<ContentDrafts />} />
 
+                        <ListItem primaryText=""    />
+                        <ListItem primaryText=""  />
+                        <ListItem primaryText="" />
+                        <ListItem primaryText=""   />
+                        <ListItem primaryText=""   />
+                        <ListItem primaryText="" />
+                        <ListItem primaryText=""  />
+                        <ListItem primaryText=""   />
+                        <ListItem primaryText=""    />
+                        <ListItem primaryText=""  />
+                        <ListItem primaryText="" />
+                        <ListItem primaryText=""  />
+                        <ListItem primaryText=""   />
+                        <ListItem primaryText=""  />
+                        <ListItem primaryText="" />
+                        <ListItem primaryText=""   />
+                        <ListItem primaryText=""   />
+                        <ListItem primaryText=""  />
+                        <ListItem primaryText="" />
+                        <ListItem primaryText=""   />
+
+                    </Paper>
+                </List>
+            </a>
         </ul>
-
     </div>
+
+
 )
 
 

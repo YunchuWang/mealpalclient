@@ -1,6 +1,10 @@
 #divy{
     height: 36px;
 }
+#sidenav{
+  margin-top:-22px;
+}
+
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #eee inset;
 }
@@ -523,7 +527,7 @@ body {
 .heading-button {
     width: 90px;
     height: 63px;
-    background-color:#A7779F !important;
+    background-color:salmon !important;
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -565,7 +569,7 @@ button:hover,
 .devbodymainnavStyle {
 
     height: 100px;
-    background-color: #A7779F;
+    background-color: salmon;
     padding: 0;
     padding-right: 1vw;
     margin: 0;

@@ -10,10 +10,7 @@ input:-webkit-autofill {
 
 
 /* meal request stylings */
-.col-lg-4 {
-    padding-right: 5px !important;
-    padding-left: 4px !important;
-}
+/*body*/
 
 /* meal box button x out */
 .modal-header .close {
@@ -127,55 +124,40 @@ li:not(:nth-child(2)) a:hover, .sidebar-nav >div> li:not(:nth-child(2)) a:hover{
 html,body{
     margin: 0 !important;
     padding: 0 !important;
+    overflow-x: hidden;
 }
 .DevBodySubNav {
     width: 100%;
     height: auto;
-    position:absolute;
-    top: 93px;
-    left: 0px;
     font-size: 14px;
     color: black;
 }
 
 .sidebarStyle {
-    position: absolute;
-    min-width: 260px;
-    min-height: 2952px;
-    height:100%;
+    float:left;
+    width: 260px;
     background-color: #A7779F;
-    top:48px;
-    bottom: 0px;
-    left:0;
+    margin:0;
+    padding:0;
     color:white;
-
+    min-height: 2000px;
     border-top: 1px solid #C0C0C0;
 }
 
 .DevBodyGrids {
-    width: 100%;
-    position: absolute;
-    top: 93px;
-    left: 0px;
-
-    padding: 0px;
-    overflow: auto!important;
+    /*position: absolute;*/
+    /*top: 93px;*/
+    /*left: 0px;*/
+    /*right: 0px;*/
+    margin: 30px;
+    overflow: hidden !important;
     height: 2794px;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-   /*-webkit-justify-content: flex-start;*/
-   /*justify-content: flex-start;*/
-    /*flex-wrap: wrap;*/
-    /*justify-content: space-around;*/
 
 }
 
 
 .sidebar-header {
     width:78px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
     margin: 0;
     padding: 20px !important;
 }
@@ -225,16 +207,11 @@ html,body{
     padding-left: 0px !important;
     margin:0px !important;
     color: white;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
 }
 .category-content .media .media-right i:hover {
     color: darkgrey;
 }
 .sidebar-nav {
-    position: absolute;
-    top: 78px;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -487,12 +464,10 @@ html,body{
     width: 100%;
     height: 48px;
     background-color: #c13e3e;
-    position: absolute;
-    top: 0;
-    left: 0;
     padding: 0;
     margin: 0;
     border-radius: 0px !important;
+    clear:both;
 }
 .appicon {
     float: left;
@@ -526,14 +501,11 @@ html,body{
 }
 .heading-elements {
     background-color: inherit;
-    position: absolute;
-    top:0;
-    right: 20px;
+    float: right;
     height: 93px;
     padding: 15px 0px;
 }
-.heading-btn-group {
-}
+
 .heading-button {
     width: 90px;
     height: 63px;
@@ -577,22 +549,19 @@ button:hover,
     outline: 0 !important;
 }
 .devbodymainnavStyle {
-    width: 100%;
+
     height: 93px;
     background-color: #A7779F;
-    position:absolute;
-    top: 0px;
-    left: 0px;
+    width:100%;
     padding: 0px 20px;
+    clear:both;
 }
 
 .bodyStyle {
     color: blue;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0px;
+
     z-index: 2;
 }
 
@@ -679,42 +648,8 @@ button:hover,
     border-radius: 0px 0px 10px 10px !important;
 }
 
-.requestheading {
-    font-size: 12px;
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-    background-color: #FFFFFF !important;
-}
-.requestheading>span>i {
-    padding-right: 5px !important;
-    color: #43C0F6;
-}
-.requestheading>span:first-child {
-    font-weight: 600 !important;
-}
-.requestheading>span:nth-child(2) {
-    float:right;
-}
-.requestpanel {
-    padding: 0px !important;
-    font-family: Trebuchet MS !important;
-}
-.requestitem {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-    font-size: 12px !important;
-    font-weight: 600;
-}
-.requestitem>span {
-    float:right;
-    font-weight: 400;
-}
-.requestitem>i {
-    padding-right: 5px;
-    color:#3CC37E;
-    position: relative;
-    top: 1px;
-}
+
+
 .modalbutton {
     float: right !important;
     margin-right: 0px !important;
@@ -747,3 +682,8 @@ button:hover,
     -webkit-align-items: flex-end;
     align-items: flex-end;
 }
+
+.onerowrequest:not(:last-child) {
+    margin-bottom: 30px;
+}
+

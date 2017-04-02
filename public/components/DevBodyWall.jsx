@@ -97,11 +97,8 @@ class DevBodyWall extends React.Component {
         }
         return (
             <div className="DevBodyGrids">
-                <div className="container-fluid">
-                    {DevReq}
-                </div>
+                {DevReq}
                 <DevModal dvalue={this.state.dvalue} date={this.state.date} time={this.state.time} lvalue={this.state.lvalue} showModal={this.props.showModal} onHide={this.close} onSubmit={this.addRequest} onDateChange={this.handleDate} onTimeChange={this.handleTime} onChange={this.handleChange}/>
-
             </div>
 
         );

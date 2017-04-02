@@ -7,10 +7,6 @@ import '../css/bootstrap.min.css';
 const DevBodyMainNav = (props) =>
     (
         <div className="devbodymainnavStyle">
-            <div className="page-title">
-                <h4>
-                </h4>
-            </div>
             <div className="heading-elements">
                 <div className="heading-btn-group">
                     <button type="button" className="heading-button" onClick={props.actions.showWriteRequest}>

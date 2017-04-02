@@ -6,7 +6,7 @@ import DevBodyWall from './DevBodyWall.jsx';
 var devbodyStyle = {
     width: '80%',
     height: '2000px',
-    backgroundColor: '#F3FAB6',
+    backgroundColor: '#E9EBEE',
     marginTop: "150px",
     color:"red",
     marginLeft:"0",

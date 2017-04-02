@@ -12,7 +12,6 @@ import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 import ContentSend from 'material-ui/svg-icons/content/send';
 import ContentDrafts from 'material-ui/svg-icons/content/drafts';
-import ActionInfo from 'material-ui/svg-icons/action/info';
 
 
 var classNames = require('classnames');
@@ -40,11 +39,10 @@ const DevSidebarList = (props) => (
 const DevSidebar = () => (
 
     <div className="sidebarStyle">
-        <ul className="sidebar-nav" id = "sidenav" >
-            <a>
-                <List>
-                    <Paper>
-                        <ListItem class="collection-item avatar">
+
+                <List className="sidebar-nav">
+
+                        <ListItem className="collection-item avatar">
                             <div className="category-content">
                                 <div className="media">
                                     <a className="media-left" href="#">
@@ -90,10 +88,7 @@ const DevSidebar = () => (
                         <ListItem primaryText="" />
                         <ListItem primaryText=""   />
 
-                    </Paper>
                 </List>
-            </a>
-        </ul>
     </div>
 
 

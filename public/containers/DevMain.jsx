@@ -81,11 +81,14 @@ class DevMain extends React.Component {
     };
     render() {
         return (
-            <div id="DevMainstyle">
+            <div>
                 <DevNavbar {...this.props} handleLogout={this.logOut.bind(this)}/>
-                <DevSidebar {...this.props}/>
-                <DevBody {...this.props} />
+                <div id="DevMainstyle">
+                    <DevSidebar {...this.props}/>
+                    <DevBody {...this.props} />
+                </div>
             </div>
+
         )
     }
 }

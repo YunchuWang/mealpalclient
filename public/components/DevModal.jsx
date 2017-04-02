@@ -29,7 +29,7 @@ class DevModal extends React.Component {
                     </Modal.Header>
                     <div className="modal-container">
                         <Modal.Body className="modal-body">
-                            <textarea rows="4" cols="10" placeholder="Eat me please..." id="description" onChange={this.props.onChange} value={this.props.dvalue} required></textarea>
+                            <textarea rows="4" cols="10" placeholder="Eat me please..." id="description" onChange={this.props.onChange} value={this.props.dvalue} maxLength="140" required></textarea>
                         </Modal.Body>
                         <Modal.Footer className="modal-footer">
                                 <div className="col-xs-6 col-sm-6 mealModalTime">

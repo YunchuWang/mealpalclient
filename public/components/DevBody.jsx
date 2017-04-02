@@ -7,11 +7,11 @@ var devbodyStyle = {
     width: '80%',
     height: '2000px',
     backgroundColor: '#F3FAB6',
-    float:"right",
+    marginTop: "150px",
     color:"red",
-    margin:"0px",
-    padding:"0px",
-    borderTop: "1px solid #C0C0C0"
+    marginLeft:"0",
+    marginRight:"0",
+    marginBottom:"0"
 };
 
 

@@ -4,6 +4,8 @@ import TimeAgo from 'react-timeago';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 import {List, ListItem} from 'material-ui/List';
+import  {Grid, Row, Col} from 'react-flex-grid';
+
 var timeagostyle = {
     color: '#808080',
     float: "right",
@@ -13,6 +15,18 @@ var timeagostyle = {
 const listitemstyle = {
     margin:"0",
     padding: "0"
+}
+
+const cardtextstyle = {
+    display: "block",
+    display: "-webkit-box",
+    height: "80px",
+    overflow: "hidden",
+    paddingTop: "0",
+    textOverflow: "ellipsis",
+    marginBottom: "15px",
+    marginTop: "8px",
+    webkitLineClamp: "3"
 }
 class DevRequest extends React.Component {
     render() {
@@ -29,7 +43,7 @@ class DevRequest extends React.Component {
                                         <TimeAgo style={timeagostyle} minPeriod="15" date={onerequest.key} />
                                     </CardActions>
                                     <Divider />
-                                    <CardText>
+                                    <CardText style={cardtextstyle}>
                                         {onerequest.description}
                                     </CardText>
                                     <Divider />

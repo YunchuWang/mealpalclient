@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf944c59-ae1a-4ad0-8c8f-4dd697a255d9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/App.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevBody.jsx" afterPath="$PROJECT_DIR$/public/components/DevBody.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevBodyMainNav.jsx" afterPath="$PROJECT_DIR$/public/components/DevBodyMainNav.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevBodyWall.jsx" afterPath="$PROJECT_DIR$/public/components/DevBodyWall.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevNavbar.jsx" afterPath="$PROJECT_DIR$/public/components/DevNavbar.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevRequest.jsx" afterPath="$PROJECT_DIR$/public/components/DevRequest.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2203">
-              <caret line="638" column="1" lean-forward="true" selection-start-line="638" selection-start-column="1" selection-end-line="638" selection-end-column="1" />
+            <state relative-caret-position="269">
+              <caret line="151" column="11" lean-forward="false" selection-start-line="151" selection-start-column="11" selection-end-line="151" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -49,7 +42,7 @@
       <file leaf-file-name="DevBodyWall.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/components/DevBodyWall.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="390">
               <caret line="98" column="40" lean-forward="false" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="40" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -58,11 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DevRequest.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mealpal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/mealpal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DevRequest.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/components/DevRequest.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="525">
+              <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
               <folding>
                 <element signature="e#107#143#0" expanded="true" />
               </folding>
@@ -73,8 +76,8 @@
       <file leaf-file-name="DevBody.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/components/DevBody.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="60">
+              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -83,8 +86,8 @@
       <file leaf-file-name="DevSidebar.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/components/DevSidebar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="54" column="34" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="34" />
+            <state relative-caret-position="330">
+              <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -122,16 +125,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DevForgotPasswordContainer.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/containers/DevForgotPasswordContainer.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -143,8 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modal-footer</find>
-      <find>black</find>
       <find>flat-butt</find>
       <find>butt</find>
       <find>devbodygrid</find>
@@ -154,25 +145,27 @@
       <find>navbarStyle</find>
       <find>navbar</find>
       <find>navbarstyle</find>
-      <find>html</find>
       <find>bodygrid</find>
       <find>sidebarStyle</find>
       <find>type</find>
       <find>sidebarstyl</find>
-      <find>sidebarstyle</find>
       <find>sidebarst</find>
       <find>media-right</find>
-      <find>mainstyle</find>
       <find>position:absolute</find>
       <find>position: a</find>
       <find>panel</find>
-      <find>main</find>
       <find>sidebar-nav</find>
       <find>onerow</find>
-      <find>DevBodyGrids</find>
       <find>onerowrequest</find>
       <find>bodygrids</find>
       <find>span</find>
+      <find>sidebarstyle</find>
+      <find>mainstyle</find>
+      <find>main</find>
+      <find>devbodymainnavStyle</find>
+      <find>DevBodyGrids</find>
+      <find>html</find>
+      <find>height</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -224,14 +217,14 @@
         <option value="$PROJECT_DIR$/config/webpack.config.dev.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/components/DevNavbar.jsx" />
-        <option value="$PROJECT_DIR$/public/containers/DevMain.jsx" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/css/App.css" />
         <option value="$PROJECT_DIR$/public/components/DevBodyWall.jsx" />
-        <option value="$PROJECT_DIR$/public/components/DevBody.jsx" />
         <option value="$PROJECT_DIR$/public/components/DevBodyMainNav.jsx" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/components/DevRequest.jsx" />
+        <option value="$PROJECT_DIR$/public/containers/DevMain.jsx" />
+        <option value="$PROJECT_DIR$/public/components/DevBody.jsx" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -847,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/mealpal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -978,29 +964,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/DevBody.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/containers/DevForgotPasswordContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/containers/DevMain.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="85" column="16" lean-forward="true" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1020,11 +988,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/DevRequest.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+          <folding>
+            <element signature="e#107#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/components/DevSidebar.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="54" column="34" lean-forward="true" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="34" />
+        <state relative-caret-position="330">
+          <caret line="34" column="32" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/DevBodyWall.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="98" column="40" lean-forward="false" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/mealpal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/components/DevBody.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/containers/DevMain.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="85" column="16" lean-forward="true" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,31 +1050,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/DevBodyWall.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="98" column="40" lean-forward="false" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2203">
-          <caret line="638" column="1" lean-forward="true" selection-start-line="638" selection-start-column="1" selection-end-line="638" selection-end-column="1" />
+        <state relative-caret-position="269">
+          <caret line="151" column="11" lean-forward="false" selection-start-line="151" selection-start-column="11" selection-end-line="151" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/components/DevRequest.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#107#143#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

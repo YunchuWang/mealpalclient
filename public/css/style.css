@@ -135,7 +135,7 @@ html,body{
 
 .sidebarStyle {
     float:left;
-    width: 260px;
+    width: 20%;
     background-color: #A7779F;
     margin:0;
     padding:0;
@@ -149,10 +149,9 @@ html,body{
     /*top: 93px;*/
     /*left: 0px;*/
     /*right: 0px;*/
-    margin: 30px;
-    overflow: hidden !important;
-    height: 2794px;
-
+    padding: 30px;
+    height: calc(100% - 8vw);
+    width: 100%;
 }
 
 
@@ -550,11 +549,11 @@ button:hover,
 }
 .devbodymainnavStyle {
 
-    height: 93px;
+    height: 8vw;
     background-color: #A7779F;
     width:100%;
     padding: 0px 20px;
-    clear:both;
+    clear: both;
 }
 
 .bodyStyle {

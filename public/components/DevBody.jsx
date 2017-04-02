@@ -4,10 +4,10 @@ import DevBodySubNav from './DevBodySubNav.jsx';
 import DevBodyWall from './DevBodyWall.jsx';
 
 var devbodyStyle = {
-    minWidth: '1020px',
-    minHeight: '2952px',
+    width: '80%',
+    height: '2000px',
     backgroundColor: '#F3FAB6',
-    float: "right",
+    float:"right",
     color:"red",
     margin:"0px",
     padding:"0px",
@@ -18,7 +18,6 @@ var devbodyStyle = {
 const DevBody = (props) => (
     <div style={devbodyStyle}>
         <DevBodyMainNav {...props}></DevBodyMainNav>
-        <DevBodySubNav></DevBodySubNav>
         <DevBodyWall {...props}></DevBodyWall>
     </div>
 )

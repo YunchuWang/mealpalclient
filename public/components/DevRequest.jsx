@@ -25,8 +25,7 @@ const cardtextstyle = {
     paddingTop: "0",
     textOverflow: "ellipsis",
     marginBottom: "15px",
-    marginTop: "8px",
-    webkitLineClamp: "3"
+    marginTop: "8px"
 }
 class DevRequest extends React.Component {
     render() {

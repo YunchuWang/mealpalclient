@@ -9,6 +9,7 @@ import axios from 'axios';
 import {apihost} from '../constants/global';
 import moment from 'moment';
 
+
 class DevBodyWall extends React.Component {
     constructor(props,context){
         super(props,context);
@@ -26,7 +27,6 @@ class DevBodyWall extends React.Component {
         this.close = this.close.bind(this);
         this.open = this.open.bind(this);
     };
-
     handleDate(event,date) {
         this.setState({date: date});
     };

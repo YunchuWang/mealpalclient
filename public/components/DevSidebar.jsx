@@ -3,17 +3,14 @@ import '../css/bootstrap-theme.css';
 import '../css/bootstrap.css';
 import '../css/bootstrap.min.css';
 import profile from '../img/profile.jpg';
-import Paper from 'material-ui/Paper';
-import Menu from 'material-ui/Menu';
-import MenuItem from 'material-ui/MenuItem';
+
 import Divider from 'material-ui/Divider';
 import {List, ListItem} from 'material-ui/List';
-import ContentInbox from 'material-ui/svg-icons/content/inbox';
-import ActionGrade from 'material-ui/svg-icons/action/grade';
-import ContentSend from 'material-ui/svg-icons/content/send';
-import ContentDrafts from 'material-ui/svg-icons/content/drafts';
-
-
+import ActionFace from 'material-ui/svg-icons/action/face';
+import ActionFavorite from 'material-ui/svg-icons/action/favorite';
+import ContentWeekend from 'material-ui/svg-icons/content/weekend';
+import MapsRestaurant from 'material-ui/svg-icons/maps/restaurant';
+import ActionSettings from 'material-ui/svg-icons/action/settings';
 var classNames = require('classnames');
 const DevSidebarList = (props) => (
 
@@ -39,9 +36,7 @@ const DevSidebarList = (props) => (
 const DevSidebar = () => (
 
     <div className="sidebarStyle">
-
-                <List className="sidebar-nav">
-
+        <List className="sidebar-nav">
                         <ListItem className="collection-item avatar">
                             <div className="category-content">
                                 <div className="media">
@@ -55,18 +50,17 @@ const DevSidebar = () => (
                                     </div>
                                     <div className="media-right">
                                         <a href="#">
-                                            <i className="glyphicon glyphicon-cog"></i>
+                                            <ActionSettings/>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </ListItem>
                         <Divider />
-                        <ListItem primaryText="Flash Dining"  idname="flashdining" leftIcon={<ContentInbox />} />
-                        <ListItem primaryText="Meal Friends" idname="mealfriends" leftIcon={<ActionGrade />} />
-                        <ListItem primaryText="Meal Groups" idname="mealgroups" leftIcon={<ContentSend />} />
-                        <ListItem primaryText="Memories" idname="memories" leftIcon={<ContentDrafts />} />
-
+                        <ListItem primaryText="Flash Dining" leftIcon={<MapsRestaurant />} />
+                        <ListItem primaryText="Meal Friends" leftIcon={<ActionFace />} />
+                        <ListItem primaryText="Meal Groups" leftIcon={<ContentWeekend />} />
+                        <ListItem primaryText="Memories" leftIcon={<ActionFavorite />} />
                         <ListItem primaryText=""    />
                         <ListItem primaryText=""  />
                         <ListItem primaryText="" />
@@ -87,8 +81,8 @@ const DevSidebar = () => (
                         <ListItem primaryText=""  />
                         <ListItem primaryText="" />
                         <ListItem primaryText=""   />
+        </List>
 
-                </List>
     </div>
 
 

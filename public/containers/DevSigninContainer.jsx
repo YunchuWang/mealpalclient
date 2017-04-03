@@ -5,6 +5,7 @@ import * as Actions from '../actions';
 import axios from 'axios';
 import {apihost} from '../constants/global';
 import DevSignInForm from '../components/DevSignInForm';
+import {toastr} from 'react-redux-toastr';
 
 
 
@@ -49,6 +50,7 @@ class DevSigninContainer extends React.Component {
             console.log(error);
         });
         this.props.actions.login(email,password);
+        toastr.success('Test', 'Hello World')
         // alert("hello");
     }
     render() {

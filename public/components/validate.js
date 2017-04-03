@@ -14,11 +14,11 @@ exports.validateLogIn = (values) => {
             errors[ field ] = 'Required'
         }
     })
-    if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.unc\.edu$/i.test(values.email)) {
+    if (values.email && !/^[A-Z0-9._%+-]+@([A-Z0-9.-]+\.)*unc\.edu$/i.test(values.email)) {
         errors.email = 'Invalid email address'
     }
-    if (values.password && !/^(?=.*\d).{4,15}$/.test(values.password)) {
-        errors.password = 'Enter 4-15 digits with at least one numeric digit.'
+    if (values.password && !/.{4,15}$/.test(values.password)) {
+        errors.password = 'Enter 4-15 digits.'
     }
     return errors;
 }
@@ -36,7 +36,7 @@ exports.validateSignUp = (values) => {
     if (values.confirmpassword && values.password !== values.confirmpassword) {
         errors.confirmpassword = 'Does not match password.'
     }
-    if (values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.unc\.edu$/i.test(values.email)) {
+    if (values.email && !/^[A-Z0-9._%+-]+@([A-Z0-9.-]+\.)*unc\.edu$/i.test(values.email)) {
         errors.email = 'Invalid. Email needs to end with unc.edu'
     }
     if (values.password && !/.{4,15}$/.test(values.password)) {

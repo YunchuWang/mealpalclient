@@ -10,8 +10,8 @@ import axios from 'axios';
 import {apihost} from '../constants/global';
 // import Pusher from 'pusher';
 import Pusher from 'pusher-js';
-
 var pusher, channel;
+
 class DevMain extends React.Component {
     constructor(props){
         super(props);
@@ -74,6 +74,7 @@ class DevMain extends React.Component {
             if(response.data.status === "pass") {
                 _this.context.router.push('/');
             }
+            //error handling needed here
         }).catch(function (error) {
             console.log(error);
         });

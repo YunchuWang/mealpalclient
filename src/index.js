@@ -11,6 +11,7 @@ import { createStore, applyMiddleware } from 'redux';
 import rootReducer from '../public/reducers/index';
 import {Provider} from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import ReduxToastr from 'react-redux-toastr';
 
 var thunkMiddleware = function ({ dispatch, getState }) {
 

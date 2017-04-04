@@ -10,7 +10,9 @@ import axios from 'axios';
 import {apihost} from '../constants/global';
 // import Pusher from 'pusher';
 import Pusher from 'pusher-js';
-var pusher, channel;
+import {toastr} from 'react-redux-toastr';
+
+var pusher, channel1,channel2;
 
 class DevMain extends React.Component {
     constructor(props){
@@ -44,15 +46,24 @@ class DevMain extends React.Component {
             encrypted: true
         });
 
-        channel = pusher.subscribe('request-channel');
-        channel.bind('request-event', function(data) {
+        channel1 = pusher.subscribe('request-channel');
+        channel1.bind('request-event', function(data) {
             if(data.message === "update") {
                 _this.getPost();
             }
         });
+        channel2 = pusher.subscribe('logout-channel');
+        channel2.bind('logout-event', function(data) {
+            if(data.message === "logout") {
+                _this.logOut();
+                toastr.info("Session expired.","Please log in again");
+            }
+        });
     };
     componentWillUnmount() {
-        pusher.unsubscribe();
+        // alert("hello");
+        pusher.unsubscribe('request-channel');
+        pusher.unsubscribe('logout-channel');
     };
     getPost() {
         var _this = this;
@@ -66,14 +77,11 @@ class DevMain extends React.Component {
             console.log(error);
         });
     }
-    logOut(event) {
-        event.preventDefault();
+    logOut() {
         var _this = this;
         axios.get(apihost + '/logout').then(function (response) {
             console.log(response);
-            if(response.data.status === "pass") {
-                _this.context.router.push('/');
-            }
+            _this.context.router.push('/');
             //error handling needed here
         }).catch(function (error) {
             console.log(error);

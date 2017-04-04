@@ -8,7 +8,7 @@ import DevModal from './DevModal'
 import axios from 'axios';
 import {apihost} from '../constants/global';
 import moment from 'moment';
-
+import {toastr} from 'react-redux-toastr';
 
 class DevBodyWall extends React.Component {
     constructor(props,context){
@@ -40,6 +40,7 @@ class DevBodyWall extends React.Component {
 
     open() {
         this.props.actions.showWriteRequest();
+        toastr.success('Test', 'Hello World');
     };
 
     handleChange(event) {

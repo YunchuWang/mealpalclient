@@ -6,6 +6,7 @@ import * as Actions from '../actions';
 import axios from 'axios';
 import {apihost} from '../constants/global';
 import DevSignUpForm from '../components/DevSignUpForm';
+import {toastr} from 'react-redux-toastr';
 
 var sha1 = require('sha1');
 class DevSignUpContainer extends React.Component {
@@ -57,7 +58,14 @@ class DevSignUpContainer extends React.Component {
         }).then(function (response) {
             console.log(response);
             if(response.data.status === "pass") {
+                if(response.data.success) {
+                    toastr.success(response.data.success);
+                }
                 _this.context.router.push('/DevMain');
+            } else {
+                if(response.data.error) {
+                    toastr.error(response.data.error);
+                }
             }
         }).catch(function (error) {
             console.log(error);

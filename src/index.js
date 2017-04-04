@@ -36,15 +36,27 @@ let store = finalCreateStore(rootReducer)
 ReactDOM.render((
         <MuiThemeProvider>
             <Provider store={store}>
-                <Router history={hashHistory}>
-                    <Route path="/" component={Project} />
-                    <Route path="/DevMain" component={DevMain} />
-                    <Route path="/DevSignup" component={DevSignup}>
-                        <Route path="/DevSignUpContainer" component={DevSignUpContainer} />
-                        <Route path="/DevForgotPasswordContainer" component={DevForgotPasswordContainer} />
-                        <Route path="/DevSigninContainer" component={DevSigninContainer} />
-                    </Route>
-                </Router>
+                <div>
+                    <ReduxToastr
+                        timeOut={4000}
+                        newestOnTop={false}
+                        preventDuplicates={false}
+                        position="top-left"
+                        transitionIn="fadeIn"
+                        transitionOut="fadeOut"
+                        progressBar/>
+                    <Router history={hashHistory}>
+                        <Route path="/" component={Project} />
+                        <Route path="/DevMain" component={DevMain} />
+                        <Route path="/DevSignup" component={DevSignup}>
+                            <Route path="/DevSignUpContainer" component={DevSignUpContainer} />
+                            <Route path="/DevForgotPasswordContainer" component={DevForgotPasswordContainer} />
+                            <Route path="/DevSigninContainer" component={DevSigninContainer} />
+                        </Route>
+                    </Router>
+
+                </div>
+
             </Provider>
         </MuiThemeProvider>
     )

@@ -5,7 +5,7 @@ import * as Actions from '../actions';
 import axios from 'axios';
 import {apihost} from '../constants/global';
 import DevForgotPasswordForm from '../components/DevForgotPasswordForm';
-
+import {toastr} from 'react-redux-toastr';
 
 class DevForgotPasswordContainer extends React.Component {
     constructor(props){
@@ -21,7 +21,14 @@ class DevForgotPasswordContainer extends React.Component {
         }).then(function (response) {
             console.log(response);
             if(response.data.status === "pass") {
+                if(response.data.success) {
+                    toastr.success(response.data.success);
+                }
                 _this.context.router.push('/');
+            } else {
+                if(response.data.error) {
+                    toastr.error(response.data.error);
+                }
             }
         }).catch(function (error) {
             console.log(error);

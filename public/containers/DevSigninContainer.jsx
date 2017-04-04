@@ -45,12 +45,13 @@ class DevSigninContainer extends React.Component {
             console.log(response);
             if(response.data.status === "pass") {
                 _this.context.router.push('/DevMain');
+            } else {
+                toastr.error(response.data.error);
             }
         }).catch(function (error) {
             console.log(error);
         });
         this.props.actions.login(email,password);
-        toastr.success('Test', 'Hello World')
         // alert("hello");
     }
     render() {

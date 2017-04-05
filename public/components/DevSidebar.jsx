@@ -11,76 +11,70 @@ import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ContentWeekend from 'material-ui/svg-icons/content/weekend';
 import MapsRestaurant from 'material-ui/svg-icons/maps/restaurant';
 import ActionSettings from 'material-ui/svg-icons/action/settings';
+import {CardActions} from 'material-ui/Card';
+import Avatar from 'material-ui/Avatar';
+import Subheader from 'material-ui/Subheader';
+import CommunicationChatBubble from 'material-ui/svg-icons/communication/chat-bubble';
+
 var classNames = require('classnames');
-const DevSidebarList = (props) => (
-
-    <div>
-        <li data-toggle="collapse" data-target={'#' + props.idname} aria-expanded="false" aria-controls={props.idname}>
-            <a href={'#' + props.listname}>
-                <i className={classNames('glyphicon','sideicon',props.styleclassName)}></i><span>{props.listname}</span>
-            </a>
-        </li>
-        <div className="collapse" id={props.idname}>
-            <ul>
-                {
-                    props.listitems.map((listitem)=>
-                        <li><a href={"#" + listitem}>{listitem}</a></li>
-                    )
-                }
-            </ul>
-        </div>
-
-    </div>
-)
+const location = <div className="secondarytext"><i className="glyphicon glyphicon-map-marker secondaryicon"></i>
+                            Durham, NC</div>
+// const DevSidebarList = (props) => (
+//
+//     <div>
+//         <li data-toggle="collapse" data-target={'#' + props.idname} aria-expanded="false" aria-controls={props.idname}>
+//             <a href={'#' + props.listname}>
+//                 <i className={classNames('glyphicon','sideicon',props.styleclassName)}></i><span>{props.listname}</span>
+//             </a>
+//         </li>
+//         <div className="collapse" id={props.idname}>
+//             <ul>
+//                 {
+//                     props.listitems.map((listitem)=>
+//                         <li><a href={"#" + listitem}>{listitem}</a></li>
+//                     )
+//                 }
+//             </ul>
+//         </div>
+//
+//     </div>
+// )
 
 const DevSidebar = () => (
 
     <div className="sidebarStyle">
-        <List className="sidebar-nav">
-                        <ListItem className="collection-item avatar">
-                            <div className="category-content">
-                                <div className="media">
-                                    <a className="media-left" href="#">
-                                        <img className="media-object" src={profile} alt="Generic placeholder image" />
-                                    </a>
-                                    <div className="media-body" >
-                                        <h5 className="media-heading" id= "black">Peter Wang</h5>
-                                        <i className="glyphicon glyphicon-map-marker"></i>
-                                        Durham, NC
-                                    </div>
-                                    <div className="media-right">
-                                        <a href="#">
-                                            <ActionSettings/>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </ListItem>
-                        <Divider />
-                        <ListItem primaryText="Flash Dining" leftIcon={<MapsRestaurant />} />
-                        <ListItem primaryText="Meal Friends" leftIcon={<ActionFace />} />
-                        <ListItem primaryText="Meal Groups" leftIcon={<ContentWeekend />} />
-                        <ListItem primaryText="Memories" leftIcon={<ActionFavorite />} />
-                        <ListItem primaryText=""    />
-                        <ListItem primaryText=""  />
-                        <ListItem primaryText="" />
-                        <ListItem primaryText=""   />
-                        <ListItem primaryText=""   />
-                        <ListItem primaryText="" />
-                        <ListItem primaryText=""  />
-                        <ListItem primaryText=""   />
-                        <ListItem primaryText=""    />
-                        <ListItem primaryText=""  />
-                        <ListItem primaryText="" />
-                        <ListItem primaryText=""  />
-                        <ListItem primaryText=""   />
-                        <ListItem primaryText=""  />
-                        <ListItem primaryText="" />
-                        <ListItem primaryText=""   />
-                        <ListItem primaryText=""   />
-                        <ListItem primaryText=""  />
-                        <ListItem primaryText="" />
-                        <ListItem primaryText=""   />
+        <List>
+            <ListItem className="category-content"
+                      primaryText="Peter Wang"
+                      secondaryText={location}
+                      leftAvatar={<Avatar src={profile} />}
+                      rightIcon={<ActionSettings className="right"/>}
+            />
+            <Divider />
+            <ListItem primaryText="Flash Dining" leftIcon={<MapsRestaurant />} />
+            <ListItem primaryText="Meal Friends" leftIcon={<ActionFace />} />
+            <ListItem primaryText="Meal Groups" leftIcon={<ContentWeekend />} />
+            <ListItem primaryText="Memories" leftIcon={<ActionFavorite />} />
+            <ListItem primaryText=""    />
+            <ListItem primaryText=""  />
+            <ListItem primaryText="" />
+            <ListItem primaryText=""   />
+            <ListItem primaryText=""   />
+            <ListItem primaryText="" />
+            <ListItem primaryText=""  />
+            <ListItem primaryText=""   />
+            <ListItem primaryText=""    />
+            <ListItem primaryText=""  />
+            <ListItem primaryText="" />
+            <ListItem primaryText=""  />
+            <ListItem primaryText=""   />
+            <ListItem primaryText=""  />
+            <ListItem primaryText="" />
+            <ListItem primaryText=""   />
+            <ListItem primaryText=""   />
+            <ListItem primaryText=""  />
+            <ListItem primaryText="" />
+            <ListItem primaryText=""   />
         </List>
 
     </div>
@@ -90,5 +84,11 @@ const DevSidebar = () => (
 
 
 
+// <div className="media-body" >
+//
+//
+//
+//
+//                     </div>
 
 export default DevSidebar;

@@ -96,7 +96,8 @@ class DevBodyWall extends React.Component {
 
     };
     elementInfiniteLoad() {
-        return <div>
+        return <div className="infinite-list-item">
+            Loading...
         </div>;
     };
     addRequest(e) {
@@ -145,7 +146,7 @@ class DevBodyWall extends React.Component {
         console.log(this.state.isInfiniteLoading)
         feedHeight = window.screen.height*.92;
         // feedHeight = 900;
-        console.log("what")
+        // console.log("what")
         if (this.props.requestsInfo.count !== 0) {
             DevReq = <DevRequest requestinfo={this.props.requestsInfo.mealrequests} count={this.props.requestsInfo.count}/>;
         }

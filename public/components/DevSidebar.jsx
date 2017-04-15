@@ -11,6 +11,10 @@ import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ContentWeekend from 'material-ui/svg-icons/content/weekend';
 import MapsRestaurant from 'material-ui/svg-icons/maps/restaurant';
 import ActionSettings from 'material-ui/svg-icons/action/settings';
+import SocialSentimentVerySatisfiedIcon from 'material-ui/svg-icons/social/sentiment-very-satisfied';
+import SocialGroup from 'material-ui/svg-icons/social/group';
+
+
 import {CardActions} from 'material-ui/Card';
 import Avatar from 'material-ui/Avatar';
 import Subheader from 'material-ui/Subheader';
@@ -52,8 +56,8 @@ const DevSidebar = () => (
             />
             <Divider />
             <ListItem primaryText="Flash Dining" leftIcon={<MapsRestaurant />} />
-            <ListItem primaryText="Meal Friends" leftIcon={<ActionFace />} />
-            <ListItem primaryText="Meal Groups" leftIcon={<ContentWeekend />} />
+            <ListItem primaryText="Meal Friends" leftIcon={<SocialSentimentVerySatisfiedIcon />} />
+            <ListItem primaryText="Meal Groups" leftIcon={<SocialGroup />} />
             <ListItem primaryText="Memories" leftIcon={<ActionFavorite />} />
             <ListItem primaryText=""    />
             <ListItem primaryText=""  />

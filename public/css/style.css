@@ -1,10 +1,21 @@
+
 #cookie{
-    top: -18px;
-    margin-left: -19px;
+  display: -webkit-flex;
+     display: flex;
+     -webkit-flex-direction: row;
+     flex-direction: row;
+     position: relative;
+     padding: 13px 24px 12px 12px !important;
+
 }
 #cookie2{
-    top: -18px;
-    margin-left: -19px;
+  display: -webkit-flex;
+     display: flex;
+     -webkit-flex-direction: row;
+     flex-direction: row;
+
+  position: relative;
+    padding: 13px 24px 12px 12px !important;
 }
 
 #divy{
@@ -175,6 +186,7 @@ body {
     padding: 30px;
     height: calc(100% - 100px);
     width: 100%;
+
 }
 
 .category-content {

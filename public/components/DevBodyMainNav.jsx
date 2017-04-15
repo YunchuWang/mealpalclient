@@ -18,9 +18,9 @@ const DevBodyMainNav = (props) =>
                     <button type="button" className="heading-button" onClick={props.actions.showWriteRequest}>
                         <ContentInbox/><span>Write</span>
                     </button>
-                    <button id="draft" type="button" className="heading-button"><ContentDrafts/><span>Draft</span></button>
-                    <button type="button" className="heading-button"><ContentSend/><span>Sent</span></button>
-                    <button type="button" className="heading-button"><ActionDelete/><span>Remove</span></button>
+                    <button id="draft" type="button" className="heading-button" onClick={props.actions.showInbox}>
+                      <ContentDrafts/><span>Inbox</span></button>
+
                 </div>
             </div>
         </div>

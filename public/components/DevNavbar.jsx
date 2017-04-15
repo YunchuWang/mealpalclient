@@ -8,6 +8,10 @@ import '../css/bootstrap.min.css';
 import Badge from 'material-ui/Badge';
 import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
 import ActionAnnouncement from 'material-ui/svg-icons/action/announcement';
+import CommunicationChatBubbleIcon from 'material-ui/svg-icons/communication/chat-bubble';
+import CommunicationStayCurrentPortraitIcon from 'material-ui/svg-icons/communication/stay-current-portrait';
+
+
 
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import profile from '../img/profile.jpg';
@@ -28,34 +32,18 @@ appicon"></span>MealPal</a></li>
                     </li>
 
                     <div><span className="label label-success"></span></div>
-                    <li className="dropdown"><a href="#Actions" className="btn " id="messages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <Badge id="cookie2"
-                               badgeContent={4}
-                               primary={true}
-                               badgeStyle={{top: 5, right: 8}}
-                        > <NotificationsIcon /></Badge>
-                    </a>
-                        <ul className="dropdown-menu dropdown-menu-left" aria-labelledby="messages">
-                            <a className="dropdown-item" href="#">Action</a>
-                            <a className="dropdown-item" href="#">Action</a>
-                            <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Separated link</a>
-                        </ul>
+                    <li className="dropdown">                        <Badge  id="cookie2"
+                                                   badgeContent={4}
+                                                   primary={true}
+                                                   badgeStyle={{top: 0}}
+                                            > <NotificationsIcon /></Badge>
                     </li>
 
-                    <li className="dropdown"><a href="#about" className="btn " id="messages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <Badge id="cookie"
-                               badgeContent={4}
-                               primary={true}
-                               badgeStyle={{top: 5, right: 8}}
-                        > <ActionAnnouncement /></Badge>
-                    </a>
-                        <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="messages">
-                            <a className="dropdown-item" href="#">Action</a>
-                            <a className="dropdown-item" href="#">Action</a>
-                            <div className="dropdown-divider"></div>
-                            <a className="dropdown-item" href="#">Separated link</a>
-                        </ul>
+                    <li className="dropdown" >                        <Badge id="cookie"
+                                                   badgeContent={4}
+                                                   primary={false}
+                                                   badgeStyle={{top: 0}}
+                                            > <CommunicationStayCurrentPortraitIcon /></Badge>
 
                     </li>
                     <li className="dropdown">

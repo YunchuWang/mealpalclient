@@ -5,13 +5,15 @@ import DevBodyWall from './DevBodyWall.jsx';
 
 var devbodyStyle = {
     width: '80%',
-    height: '2000px',
+    height: '750px',
     backgroundColor: '#E9EBEE',
     marginTop: "150px",
     color:"red",
     marginLeft:"0",
     marginRight:"0",
-    marginBottom:"0"
+    marginBottom:"0",
+    position: "absolute",
+    top: "0"
 };
 
 

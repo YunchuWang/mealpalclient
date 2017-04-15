@@ -34,7 +34,7 @@ class DevRequest extends React.Component {
                     function(onerequest) {
                         return (
                             <div className="col-md-4" key={onerequest.key}>
-                                <Card>
+                                <Card style={{height:"212px"}}>
                                     <CardActions>
                                         <i className="glyphicon glyphicon-cutlery"></i>
                                             {onerequest.userid}

@@ -11,7 +11,6 @@ import {apihost} from '../constants/global';
 // import Pusher from 'pusher';
 import Pusher from 'pusher-js';
 import {toastr} from 'react-redux-toastr';
-
 var pusher, channel1,channel2;
 
 class DevMain extends React.Component {
@@ -23,17 +22,20 @@ class DevMain extends React.Component {
         var _this = this;
         axios.get(apihost + '/login').then(function(response){
             if(response.data.status === "fail") {
+                if(response.data.error) {
+                    toastr.warning(response.data.error);
+                }
                 _this.context.router.push('/');
             } else {
-                axios.get(apihost + '/post').then(function (response) {
-                    if(response.data.status === "fail") {
-                        _this.context.router.push('/');
-                    } else {
-                        _this.props.actions.getRequests(response.data.content,response.data.length);
-                    }
-                }).catch(function (error) {
-                    console.log(error);
-                });
+                // axios.get(apihost + '/post/1').then(function (response) {
+                //     if(response.data.status === "fail") {
+                //         _this.context.router.push('/');
+                //     } else {
+                //         _this.props.actions.getRequests(response.data.content,response.data.length,false);
+                //     }
+                // }).catch(function (error) {
+                //     console.log(error);
+                // });
             }
         }).catch(function (error) {
             console.log(error);
@@ -45,7 +47,7 @@ class DevMain extends React.Component {
         pusher = new Pusher('dbcd20122522e32d0f31', {
             encrypted: true
         });
-
+        console.log("mounted");
         channel1 = pusher.subscribe('request-channel');
         channel1.bind('request-event', function(data) {
             if(data.message === "update") {

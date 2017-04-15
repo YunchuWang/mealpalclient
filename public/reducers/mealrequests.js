@@ -17,7 +17,12 @@ export default function mealrequests(state = {count:0,mealrequests:[]}, action) 
             return {
             };
         case GET_REQUESTS:
-            return {count: action.length , mealrequests: action.content};
+            if (action.concat) {
+                // console.log(state.mealrequests);
+                return {count: state.count + action.length , mealrequests: state.mealrequests.concat(action.content)};
+            } else {
+                return {count: action.length , mealrequests: action.content};
+            }
         default:
             return state;
     }

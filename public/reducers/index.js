@@ -5,6 +5,8 @@ import { combineReducers } from 'redux'
 import requesttoggle from './requesttoggle'
 import useraccount from './useracount'
 import mealrequests from './mealrequests'
+import infinitetoggle from './infinitetoggle'
+import notifytoggle from './notifytoggle'
 import { reducer as formReducer } from 'redux-form'
 import {reducer as toastrReducer} from 'react-redux-toastr'
 const rootReducer = combineReducers({
@@ -12,7 +14,10 @@ const rootReducer = combineReducers({
     userInfo: useraccount,
     requestsInfo: mealrequests,
     form: formReducer,
-    toastr: toastrReducer
+    toastr: toastrReducer,
+    infinite: infinitetoggle,
+    notify: notifytoggle
+
 })
 
 export default rootReducer;

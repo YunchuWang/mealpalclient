@@ -9,22 +9,25 @@ import axios from 'axios';
 import {apihost} from '../constants/global';
 import moment from 'moment';
 import {toastr} from 'react-redux-toastr';
+
 var Infinite = require('react-infinite');
 var feedHeight;
-var page = 1;
-var flag = true;
+// var page = 1;
 var concat = false;
 class DevBodyWall extends React.Component {
     constructor(props,context){
         super(props,context);
+        var _this = this;
         this.state = {
             dvalue: '',
             svalue:'',
             date:null,
             time: null,
             lvalue:'',
-            isInfiniteLoading: false,
-            infiniteLoadBeginEdgeOffset: 0
+            // isInfiniteLoading: _this.props.infinite.isInfiniteLoading,
+            // infiniteLoadBeginEdgeOffset: _this.props.infinite.infiniteLoadBeginEdgeOffset,
+            flag: _this.props.infinite.flag
+            // page: _this.props.infinite.page
         };
         this.addRequest = this.addRequest.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -51,34 +54,26 @@ class DevBodyWall extends React.Component {
         this.props.actions.showWriteRequest();
     };
     getPost() {
-        if (!flag) return;
+        if (!this.props.infinite.flag) return;
         var _this = this;
-        axios.get(apihost + '/post/' + page).then(function (response) {
+        axios.get(apihost + '/post/' + _this.props.infinite.page).then(function (response) {
             if(response.data.status === "fail") {
                 _this.context.router.push('/');
             } else {
-                console.log(response.data.length);
+                console.log(_this.props.infinite.page);
                 if(!response.data.err && response.data.length > 0) {
-                    page = page + 1;
-                    if(page > 2) concat = true;
-                    _this.props.actions.getRequests(response.data.content,response.data.length,concat);
-                    flag = true;
-                    _this.setState({
-                        isInfiniteLoading: false
-                    });
-                } else {
-                    flag = false;
-                    _this.setState({
-                        isInfiniteLoading: true,
-                        infiniteLoadBeginEdgeOffset: undefined
-                    });
 
+                    if(_this.props.infinite.page >= 2) concat = true;
+                    _this.props.actions.getRequests(response.data.content,response.data.length,concat);
+                    _this.props.actions.onInifinite();
+                } else {
+                    _this.props.actions.offInifinite();
                 }
             }
         }).catch(function (error) {
             console.log(error);
         });
-    }
+    };
     handleChange(event) {
         switch(event.target.id) {
             case 'location':
@@ -91,7 +86,6 @@ class DevBodyWall extends React.Component {
     };
     handleInfiniteLoad() {
         var that = this;
-        // alert("call");
         that.getPost();
 
     };
@@ -143,7 +137,7 @@ class DevBodyWall extends React.Component {
 
     render() {
         var DevReq =  <div></div>;
-        console.log(this.state.isInfiniteLoading)
+        console.log(this.props.infinite)
         feedHeight = window.screen.height*.92;
         // feedHeight = 900;
         // console.log("what")
@@ -151,7 +145,7 @@ class DevBodyWall extends React.Component {
             DevReq = <DevRequest requestinfo={this.props.requestsInfo.mealrequests} count={this.props.requestsInfo.count}/>;
         }
         return (
-            <Infinite  className="DevBodyGrids" containerHeight={feedHeight} elementHeight={212} onInfiniteLoad={this.handleInfiniteLoad} infiniteLoadBeginEdgeOffset={this.state.infiniteLoadBeginEdgeOffset} isInfiniteLoading={this.state.isInfiniteLoading} loadingSpinnerDelegate={this.elementInfiniteLoad()}>
+            <Infinite  className="DevBodyGrids" containerHeight={feedHeight} elementHeight={212} onInfiniteLoad={this.handleInfiniteLoad} infiniteLoadBeginEdgeOffset={this.props.infinite.infiniteLoadBeginEdgeOffset} isInfiniteLoading={this.props.infinite.isInfiniteLoading} loadingSpinnerDelegate={this.elementInfiniteLoad()}>
                 {DevReq}
                 <DevModal dvalue={this.state.dvalue} date={this.state.date} time={this.state.time} lvalue={this.state.lvalue} showModal={this.props.showModal} onHide={this.close} onSubmit={this.addRequest} onDateChange={this.handleDate} onTimeChange={this.handleTime} onChange={this.handleChange}/>
             </Infinite>

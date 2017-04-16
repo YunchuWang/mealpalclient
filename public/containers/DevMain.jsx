@@ -11,12 +11,15 @@ import {apihost} from '../constants/global';
 // import Pusher from 'pusher';
 import Pusher from 'pusher-js';
 import {toastr} from 'react-redux-toastr';
-var pusher, channel1,channel2;
-
+var pusher, channel1,channel2,channel3;
+// var notify = false;
 class DevMain extends React.Component {
     constructor(props){
         super(props);
-        this.getPost = this.getPost.bind(this);
+        this.colorUpdate = this.colorUpdate.bind(this);
+        this.state = {
+            notify: false
+        }
     };
     componentWillMount() {
         var _this = this;
@@ -47,10 +50,10 @@ class DevMain extends React.Component {
         pusher = new Pusher('dbcd20122522e32d0f31', {
             encrypted: true
         });
-        console.log("mounted");
+        // console.log("mounted");
         channel1 = pusher.subscribe('request-channel');
         channel1.bind('request-event', function(data) {
-            if(data.message === "update") {
+            if(data.message === "request") {
                 _this.getPost();
             }
         });
@@ -61,23 +64,32 @@ class DevMain extends React.Component {
                 toastr.info("Session expired.","Please log in again");
             }
         });
+        channel3 = pusher.subscribe('update-channel');
+        channel3.bind('update-event', function(data) {
+            if(data.message === "update") {
+                _this.colorUpdate();
+                // toastr.info("Session expired.","Please log in again");
+            }
+        })
     };
     componentWillUnmount() {
-        // alert("hello");
         pusher.unsubscribe('request-channel');
         pusher.unsubscribe('logout-channel');
+        pusher.unsubscribe('update-channel');
     };
-    getPost() {
-        var _this = this;
-        axios.get(apihost + '/post').then(function (response) {
-            if(response.data.status === "fail") {
-                _this.context.router.push('/');
-            } else {
-                _this.props.actions.getRequests(response.data.content,response.data.length);
-            }
-        }).catch(function (error) {
-            console.log(error);
-        });
+    colorUpdate() {
+        // var _this = this;
+        // axios.get(apihost + '/post').then(function (response) {
+        //     if(response.data.status === "fail") {
+        //         _this.context.router.push('/');
+        //     } else {
+        //         _this.props.actions.getRequests(response.data.content,response.data.length);
+        //     }
+        // }).catch(function (error) {
+        //     console.log(error);
+        // });
+        // alert("hello");
+        this.props.actions.onNotify();
     }
     logOut() {
         var _this = this;
@@ -110,14 +122,18 @@ class DevMain extends React.Component {
 const mapStateToProps = state => ({
     showModal: state.showModal,
     userInfo: state.userInfo,
-    requestsInfo: state.requestsInfo
+    requestsInfo: state.requestsInfo,
+    infinite: state.infinite,
+    notify: state.notify
 })
 
 DevMain.propTypes = {
     showModal: PropTypes.bool.isRequired,
     actions: PropTypes.object.isRequired,
     userInfo: PropTypes.object.isRequired,
-    requestsInfo: PropTypes.object.isRequired
+    requestsInfo: PropTypes.object.isRequired,
+    infinite: PropTypes.object.isRequired,
+    notify: PropTypes.bool.isRequired
 }
 
 const mapDispatchToProps = dispatch => ({

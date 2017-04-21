@@ -34,7 +34,7 @@ class DevRequest extends React.Component {
                     function(onerequest) {
                         return (
                             <div className="col-md-4" key={onerequest.key}>
-                                <Card style={{height:"212px"}}>
+                                <Card style={{height:"213px"}}>
                                     <CardActions>
                                         <i className="glyphicon glyphicon-cutlery"></i>
                                             {onerequest.userid}
@@ -68,7 +68,7 @@ class DevRequest extends React.Component {
             }
         );
         return (
-            <div>
+            <div className="higherz">
                 {requests}
             </div>
         );
@@ -80,3 +80,5 @@ DevRequest.propTypes = {
     count: React.PropTypes.number
 };
 export default DevRequest;
+
+// onerowrequest

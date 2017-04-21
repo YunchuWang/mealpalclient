@@ -29,16 +29,6 @@ class DevMain extends React.Component {
                     toastr.warning(response.data.error);
                 }
                 _this.context.router.push('/');
-            } else {
-                // axios.get(apihost + '/post/1').then(function (response) {
-                //     if(response.data.status === "fail") {
-                //         _this.context.router.push('/');
-                //     } else {
-                //         _this.props.actions.getRequests(response.data.content,response.data.length,false);
-                //     }
-                // }).catch(function (error) {
-                //     console.log(error);
-                // });
             }
         }).catch(function (error) {
             console.log(error);
@@ -78,17 +68,6 @@ class DevMain extends React.Component {
         pusher.unsubscribe('update-channel');
     };
     colorUpdate() {
-        // var _this = this;
-        // axios.get(apihost + '/post').then(function (response) {
-        //     if(response.data.status === "fail") {
-        //         _this.context.router.push('/');
-        //     } else {
-        //         _this.props.actions.getRequests(response.data.content,response.data.length);
-        //     }
-        // }).catch(function (error) {
-        //     console.log(error);
-        // });
-        // alert("hello");
         this.props.actions.onNotify();
     }
     logOut() {

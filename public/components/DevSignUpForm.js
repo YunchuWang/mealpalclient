@@ -26,7 +26,7 @@ const DevSignUpForm = (props) => {
             />
             <button type="submit" className="signupbutton" id="signupbut">Sign up</button>
             <Link to="/">
-                <button type="button" className="signupbutton" id="logButtons" >Back</button>
+                <button type="button" className="signupbutton" id="logButtons">Back</button>
             </Link>
         </form>
     )

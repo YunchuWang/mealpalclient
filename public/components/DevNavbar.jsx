@@ -19,15 +19,18 @@ const iconstyle = {
     paddingTop: "6px",
     paddingBottom: "6px"
 
-}
+};
+
 const homestyle = {
     backgroundColor: "#E37222",
     height: "70%",
     width: "100%",
     paddingTop: "6px",
     paddingBottom: "6px"
-}
+};
+
 var concat = false;
+
 class DevNavbar extends React.Component {
     constructor(props) {
         super(props);
@@ -40,9 +43,11 @@ class DevNavbar extends React.Component {
                 _this.context.router.push('/');
             } else {
                 if(!response.data.err && response.data.length > 0) {
-                    _this.props.actions.getRequests(response.data.content,response.data.length,concat);
                     _this.props.actions.startInifnite();
+                    _this.props.actions.getRequests(response.data.content,response.data.length,concat);
                     _this.props.actions.offNotify();
+                    var relement = document.getElementById("rinifi");
+                    relement.scrollTop = 0;
                 }
             }
         }).catch(function (error) {

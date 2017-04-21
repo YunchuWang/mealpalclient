@@ -9,10 +9,11 @@ import axios from 'axios';
 import {apihost} from '../constants/global';
 import moment from 'moment';
 import {toastr} from 'react-redux-toastr';
+import InfiniteScroll from 'react-infinite-scroller';
 
-var Infinite = require('react-infinite');
+// var Infinite = require('react-infinite');
 var feedHeight;
-// var page = 1;
+// var Waypoint = require('react-waypoint');
 var concat = false;
 class DevBodyWall extends React.Component {
     constructor(props,context){
@@ -24,10 +25,7 @@ class DevBodyWall extends React.Component {
             date:null,
             time: null,
             lvalue:'',
-            // isInfiniteLoading: _this.props.infinite.isInfiniteLoading,
-            // infiniteLoadBeginEdgeOffset: _this.props.infinite.infiniteLoadBeginEdgeOffset,
             flag: _this.props.infinite.flag
-            // page: _this.props.infinite.page
         };
         this.addRequest = this.addRequest.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -38,6 +36,8 @@ class DevBodyWall extends React.Component {
         this.handleInfiniteLoad = this.handleInfiniteLoad.bind(this);
         this.getPost = this.getPost.bind(this);
         this.elementInfiniteLoad = this.elementInfiniteLoad.bind(this);
+    };
+    componentDidUpdate() {
     };
     handleDate(event,date) {
         this.setState({date: date});
@@ -54,18 +54,21 @@ class DevBodyWall extends React.Component {
         this.props.actions.showWriteRequest();
     };
     getPost() {
-        if (!this.props.infinite.flag) return;
+        // if (!this.props.infinite.flag) return;
         var _this = this;
         axios.get(apihost + '/post/' + _this.props.infinite.page).then(function (response) {
             if(response.data.status === "fail") {
                 _this.context.router.push('/');
             } else {
-                console.log(_this.props.infinite.page);
                 if(!response.data.err && response.data.length > 0) {
 
                     if(_this.props.infinite.page >= 2) concat = true;
-                    _this.props.actions.getRequests(response.data.content,response.data.length,concat);
+                    else {
+                        concat = false;
+                    }
                     _this.props.actions.onInifinite();
+                    _this.props.actions.getRequests(response.data.content,response.data.length,concat);
+
                 } else {
                     _this.props.actions.offInifinite();
                 }
@@ -84,10 +87,8 @@ class DevBodyWall extends React.Component {
                 break;
         }
     };
-    handleInfiniteLoad() {
-        var that = this;
-        that.getPost();
-
+    handleInfiniteLoad(event) {
+        this.getPost();
     };
     elementInfiniteLoad() {
         return <div className="infinite-list-item">
@@ -137,18 +138,20 @@ class DevBodyWall extends React.Component {
 
     render() {
         var DevReq =  <div></div>;
-        console.log(this.props.infinite)
-        feedHeight = window.screen.height*.92;
-        // feedHeight = 900;
-        // console.log("what")
         if (this.props.requestsInfo.count !== 0) {
             DevReq = <DevRequest requestinfo={this.props.requestsInfo.mealrequests} count={this.props.requestsInfo.count}/>;
         }
         return (
-            <Infinite  className="DevBodyGrids" containerHeight={feedHeight} elementHeight={212} onInfiniteLoad={this.handleInfiniteLoad} infiniteLoadBeginEdgeOffset={this.props.infinite.infiniteLoadBeginEdgeOffset} isInfiniteLoading={this.props.infinite.isInfiniteLoading} loadingSpinnerDelegate={this.elementInfiniteLoad()}>
-                {DevReq}
-                <DevModal dvalue={this.state.dvalue} date={this.state.date} time={this.state.time} lvalue={this.state.lvalue} showModal={this.props.showModal} onHide={this.close} onSubmit={this.addRequest} onDateChange={this.handleDate} onTimeChange={this.handleTime} onChange={this.handleChange}/>
-            </Infinite>
+            <div className="requestwrapper" id="rinifi">
+                <InfiniteScroll className="DevBodyGrids" pageStart={0} loadMore={this.handleInfiniteLoad} hasMore={this.props.infinite.isInfiniteLoading} loader={<div className="loader">Loading ...</div>} useWindow={false} threshold={10}>
+                    {DevReq}
+                    <DevModal dvalue={this.state.dvalue} date={this.state.date}
+                              time={this.state.time} lvalue={this.state.lvalue}
+                              showModal={this.props.showModal} onHide={this.close}
+                              onSubmit={this.addRequest} onDateChange={this.handleDate}
+                              onTimeChange={this.handleTime} onChange={this.handleChange}/>
+                </InfiniteScroll>
+            </div>
 
         );
     }

@@ -24,7 +24,6 @@ class DevSigninContainer extends React.Component {
         switch(event.target.id) {
             case 'loginemail':
                 this.setState({email: event.target.value});
-                console.log("asadlk");
                 break;
             case 'loginpass':
                 this.setState({password: event.target.value});
@@ -52,7 +51,6 @@ class DevSigninContainer extends React.Component {
             console.log(error);
         });
         this.props.actions.login(email,password);
-        // alert("hello");
     }
     render() {
         return (

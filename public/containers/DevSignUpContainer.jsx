@@ -61,7 +61,7 @@ class DevSignUpContainer extends React.Component {
                 if(response.data.success) {
                     toastr.success(response.data.success);
                 }
-                _this.context.router.push('/DevMain');
+                _this.context.router.push('/DevMainPage');
             } else {
                 if(response.data.error) {
                     toastr.error(response.data.error);

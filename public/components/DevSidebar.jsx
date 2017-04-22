@@ -59,26 +59,7 @@ const DevSidebar = () => (
             <ListItem primaryText="Meal Friends" leftIcon={<SocialSentimentVerySatisfiedIcon />} />
             <ListItem primaryText="Meal Groups" leftIcon={<SocialGroup />} />
             <ListItem primaryText="Memories" leftIcon={<ActionFavorite />} />
-            <ListItem primaryText=""    />
-            <ListItem primaryText=""  />
-            <ListItem primaryText="" />
-            <ListItem primaryText=""   />
-            <ListItem primaryText=""   />
-            <ListItem primaryText="" />
-            <ListItem primaryText=""  />
-            <ListItem primaryText=""   />
-            <ListItem primaryText=""    />
-            <ListItem primaryText=""  />
-            <ListItem primaryText="" />
-            <ListItem primaryText=""  />
-            <ListItem primaryText=""   />
-            <ListItem primaryText=""  />
-            <ListItem primaryText="" />
-            <ListItem primaryText=""   />
-            <ListItem primaryText=""   />
-            <ListItem primaryText=""  />
-            <ListItem primaryText="" />
-            <ListItem primaryText=""   />
+
         </List>
 
     </div>

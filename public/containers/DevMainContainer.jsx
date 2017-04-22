@@ -13,7 +13,7 @@ import Pusher from 'pusher-js';
 import {toastr} from 'react-redux-toastr';
 var pusher, channel1,channel2,channel3;
 // var notify = false;
-class DevMain extends React.Component {
+class DevMainContainer extends React.Component {
     constructor(props){
         super(props);
         this.colorUpdate = this.colorUpdate.bind(this);
@@ -82,12 +82,18 @@ class DevMain extends React.Component {
         this.props.actions.logout();
     };
     render() {
+        var _this= this;
+        const childrenWithProps = React.Children.map(this.props.children,
+            (child) => React.cloneElement(child, {
+                ..._this.props
+            })
+        );
+
         return (
             <div>
                 <DevNavbar {...this.props} handleLogout={this.logOut.bind(this)}/>
                 <div id="DevMainstyle">
-                    <DevSidebar {...this.props}/>
-                    <DevBody {...this.props} />
+                    {childrenWithProps}
                 </div>
             </div>
 
@@ -106,7 +112,7 @@ const mapStateToProps = state => ({
     notify: state.notify
 })
 
-DevMain.propTypes = {
+DevMainContainer.propTypes = {
     showModal: PropTypes.bool.isRequired,
     actions: PropTypes.object.isRequired,
     userInfo: PropTypes.object.isRequired,
@@ -118,7 +124,9 @@ DevMain.propTypes = {
 const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(Actions, dispatch)
 })
-DevMain.contextTypes = {
+DevMainContainer.contextTypes = {
     router: React.PropTypes.object.isRequired
 };
-export default connect(mapStateToProps,mapDispatchToProps)(DevMain);
+export default connect(mapStateToProps,mapDispatchToProps)(DevMainContainer);
+
+// {this.props.children}

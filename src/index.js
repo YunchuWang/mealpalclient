@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Project from '../public/components/Project.jsx';
-import DevMain from '../public/containers/DevMain.jsx';
+import DevMainPage from '../public/components/DevMainPage';
+import DevMainContainer from '../public/containers/DevMainContainer';
 import DevSignup from '../public/components/DevSignup.jsx';
 import DevSigninContainer from '../public/containers/DevSigninContainer.jsx';
 import DevSignUpContainer from '../public/containers/DevSignUpContainer.jsx';
 import DevForgotPasswordContainer from '../public/containers/DevForgotPasswordContainer.jsx';
+import MPprofile from '../public/components/profile/MPprofile';
 import { Router, Route, hashHistory } from 'react-router';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from '../public/reducers/index';
@@ -29,10 +31,6 @@ const finalCreateStore = applyMiddleware(thunkMiddleware)(createStore)
 
 let store = finalCreateStore(rootReducer)
 
-
-
-
-
 ReactDOM.render((
         <MuiThemeProvider>
             <Provider store={store}>
@@ -47,7 +45,10 @@ ReactDOM.render((
                         progressBar/>
                     <Router history={hashHistory}>
                         <Route path="/" component={Project} />
-                        <Route path="/DevMain" component={DevMain} />
+                        <Route path="/DevMainPage" component={DevMainPage} />
+                        <Route path="/DevMainContainer" component={DevMainContainer}>
+                            <Route path="/MPprofile" component={MPprofile} />
+                        </Route>
                         <Route path="/DevSignup" component={DevSignup}>
                             <Route path="/DevSignUpContainer" component={DevSignUpContainer} />
                             <Route path="/DevForgotPasswordContainer" component={DevForgotPasswordContainer} />
@@ -59,5 +60,4 @@ ReactDOM.render((
 
             </Provider>
         </MuiThemeProvider>
-    )
-    , document.getElementById('app'));
+    ), document.getElementById('app'));

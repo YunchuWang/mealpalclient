@@ -5,14 +5,12 @@ import '../css/style.css';
 import '../css/bootstrap-theme.css';
 import '../css/bootstrap.css';
 import '../css/bootstrap.min.css';
-// import Badge from 'material-ui/Badge';
 import HomeIcon from 'material-ui/svg-icons/action/home';
 import CommunicationStayCurrentPortraitIcon from 'material-ui/svg-icons/communication/stay-current-portrait';
 import axios from 'axios';
 import {apihost} from '../constants/global';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import profile from '../img/profile.jpg';
-// import ReactDOM from 'react-dom';
 import { goToAnchor } from 'react-scrollable-anchor';
 
 const iconstyle = {
@@ -56,7 +54,6 @@ class DevNavbar extends React.Component {
         }).catch(function (error) {
             console.log(error);
         });
-         // window.scrollTo(0, 0);
     };
     render() {
         return (
@@ -76,7 +73,7 @@ appicon navlefticon"></span><span>MealPal</span></a>
                 <div className="navitem profileicon">
                     <a href="#Actions" className="btn" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src={profile} className="navimage" alt="Cinque Terre"></img></a>
                     <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-                        <a className="dropdown-item" href="#">My profile</a>
+                        <Link className="dropdown-item" to="/MPprofile">My profile</Link>
                         <a className="dropdown-item" href="#">Requests</a>
                         <a className="dropdown-item" href="#">Friends</a>
                         <div className="dropdown-divider"></div>

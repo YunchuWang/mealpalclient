@@ -12,6 +12,8 @@ import axios from 'axios';
 import {apihost} from '../constants/global';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import profile from '../img/profile.jpg';
+// import ReactDOM from 'react-dom';
+import { goToAnchor } from 'react-scrollable-anchor';
 
 const iconstyle = {
     height: "70%",
@@ -48,11 +50,13 @@ class DevNavbar extends React.Component {
                     _this.props.actions.offNotify();
                     var relement = document.getElementById("rinifi");
                     relement.scrollTop = 0;
+                    window.scrollBy(0, -175);
                 }
             }
         }).catch(function (error) {
             console.log(error);
         });
+         // window.scrollTo(0, 0);
     };
     render() {
         return (

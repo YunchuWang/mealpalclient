@@ -10,10 +10,16 @@ import {apihost} from '../constants/global';
 import moment from 'moment';
 import {toastr} from 'react-redux-toastr';
 import InfiniteScroll from 'react-infinite-scroller';
+import ScrollableAnchor from 'react-scrollable-anchor'
+// var Scroll  = require('react-scroll');
+//
+// var Link       = Scroll.Link;
+// var Element    = Scroll.Element;
+// var Events     = Scroll.Events;
+// var scroll     = Scroll.animateScroll;
+// var scrollSpy  = Scroll.scrollSpy;
 
-// var Infinite = require('react-infinite');
 var feedHeight;
-// var Waypoint = require('react-waypoint');
 var concat = false;
 class DevBodyWall extends React.Component {
     constructor(props,context){
@@ -37,8 +43,7 @@ class DevBodyWall extends React.Component {
         this.getPost = this.getPost.bind(this);
         this.elementInfiniteLoad = this.elementInfiniteLoad.bind(this);
     };
-    componentDidUpdate() {
-    };
+
     handleDate(event,date) {
         this.setState({date: date});
     };
@@ -54,7 +59,6 @@ class DevBodyWall extends React.Component {
         this.props.actions.showWriteRequest();
     };
     getPost() {
-        // if (!this.props.infinite.flag) return;
         var _this = this;
         axios.get(apihost + '/post/' + _this.props.infinite.page).then(function (response) {
             if(response.data.status === "fail") {
@@ -142,7 +146,8 @@ class DevBodyWall extends React.Component {
             DevReq = <DevRequest requestinfo={this.props.requestsInfo.mealrequests} count={this.props.requestsInfo.count}/>;
         }
         return (
-            <div className="requestwrapper" id="rinifi">
+
+            <div className="requestwrapper" id="rinifi"  >
                 <InfiniteScroll className="DevBodyGrids" pageStart={0} loadMore={this.handleInfiniteLoad} hasMore={this.props.infinite.isInfiniteLoading} loader={<div className="loader">Loading ...</div>} useWindow={false} threshold={10}>
                     {DevReq}
                     <DevModal dvalue={this.state.dvalue} date={this.state.date}
@@ -151,7 +156,9 @@ class DevBodyWall extends React.Component {
                               onSubmit={this.addRequest} onDateChange={this.handleDate}
                               onTimeChange={this.handleTime} onChange={this.handleChange}/>
                 </InfiniteScroll>
+
             </div>
+
 
         );
     }

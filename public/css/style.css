@@ -157,14 +157,12 @@ body {
 }
 
 .DevBodyGrids {
-    /*position: fixed;*/
-    /*top: 93px;*/
     /*left: 0px;*/
     /*right: 0px;*/
 
     padding: 30px;
     /*height: calc(100% - 100px);*/
-    height: 700px;
+    height:700px;
     width: 100%;
     /*background-color: #A38467;*/
     /*margin-bottom: 100px;*/
@@ -234,7 +232,9 @@ body {
     height: 16px !important;
 }
 
-
+.scroll {
+    z-index: 10;
+}
 
 
 
@@ -557,9 +557,13 @@ button:hover,
     padding-bottom: 99999px;
 }
 .requestwrapper {
-    /*background-color: #A38467;*/
-    height:700px;
+    /*background-color: blue;*/
+    height: 100%;
+    width: 100%;
     overflow:auto;
+    padding: 0;
+    margin: 0;
+    /*padding-top: 155px;*/
 }
 .higherz {
     z-index: 4;

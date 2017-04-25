@@ -4,9 +4,8 @@ import '../css/bootstrap-theme.css';
 import '../css/bootstrap.css';
 import '../css/bootstrap.min.css';
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
-import ContentSend from 'material-ui/svg-icons/content/send';
 import ContentDrafts from 'material-ui/svg-icons/content/drafts';
-import ActionDelete from 'material-ui/svg-icons/action/delete';
+
 
 
 

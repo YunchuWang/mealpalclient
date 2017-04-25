@@ -92,6 +92,7 @@ class DevBodyWall extends React.Component {
         }
     };
     handleInfiniteLoad(event) {
+        console.log("hello");
         this.getPost();
     };
     elementInfiniteLoad() {

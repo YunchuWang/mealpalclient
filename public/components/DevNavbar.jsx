@@ -12,21 +12,17 @@ import {apihost} from '../constants/global';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import profile from '../img/profile.jpg';
 import { goToAnchor } from 'react-scrollable-anchor';
+import ContentDrafts from 'material-ui/svg-icons/content/drafts';
 
 const iconstyle = {
-    height: "70%",
-    width: "100%",
-    paddingTop: "6px",
-    paddingBottom: "6px"
-
+    height: "65%",
+    width: "100%"
 };
 
 const homestyle = {
     backgroundColor: "#E37222",
-    height: "70%",
-    width: "100%",
-    paddingTop: "6px",
-    paddingBottom: "6px"
+    height: "65%",
+    width: "100%"
 };
 
 var concat = false;
@@ -34,10 +30,11 @@ var concat = false;
 class DevNavbar extends React.Component {
     constructor(props) {
         super(props);
-        this.getPost = this.getPost.bind(this);
+        this.refresh = this.refresh.bind(this);
     };
-    getPost() {
+    refresh() {
         var _this = this;
+        _this.context.router.push('/DevMainPage');
         axios.get(apihost + '/post/' + 1).then(function (response) {
             if(response.data.status === "fail") {
                 _this.context.router.push('/');
@@ -58,17 +55,24 @@ class DevNavbar extends React.Component {
     render() {
         return (
             <div className='navbarStyle'>
-                <div className="navitem navicon"><a href="#">
+                <div className="navitem navicon">
+                    <a href="#">
                       <span className="glyphicon glyphicon-cutlery
-appicon navlefticon"></span><span>MealPal</span></a>
+appicon navlefticon"/>
+                        <span>
+                        MealPal
+                    </span>
+                    </a>
                 </div>
-                <div><span className="label label-success"></span></div>
+                <div>
+                    <span className="label label-success" />
+                </div>
                 <div className="navitem homeicon">
-                    <HomeIcon style={this.props.notify? homestyle: iconstyle} color="white" className="homeiconstyle" onClick={this.getPost}/>
+                    <HomeIcon style={this.props.notify? homestyle: iconstyle} color="white" className="homeiconstyle" viewBox="0 -2 28 28" onClick={this.refresh}/>
                 </div>
 
                 <div className="navitem comicon" >
-                    <CommunicationStayCurrentPortraitIcon style={iconstyle} color="white" className="comiconstyle"/>
+                    <ContentDrafts style={iconstyle} color="white" className="comiconstyle" viewBox="0 -4 28 28" onClick={()=> {this.context.router.push('/MPRequestContainer');}}/>
                 </div>
                 <div className="navitem profileicon">
                     <a href="#Actions" className="btn" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src={profile} className="navimage" alt="Cinque Terre"></img></a>
@@ -90,4 +94,7 @@ appicon navlefticon"></span><span>MealPal</span></a>
 DevNavbar.propTypes = {
     handleLogout : React.PropTypes.func.isRequired
 }
+DevNavbar.contextTypes = {
+    router: React.PropTypes.object.isRequired
+};
 export default DevNavbar;

@@ -92,9 +92,7 @@ class DevMainContainer extends React.Component {
         return (
             <div>
                 <DevNavbar {...this.props} handleLogout={this.logOut.bind(this)}/>
-                <div id="DevMainstyle">
-                    {childrenWithProps}
-                </div>
+                {childrenWithProps}
             </div>
 
         )

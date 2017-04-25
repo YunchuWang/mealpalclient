@@ -21,6 +21,7 @@ class DevMainPage extends React.Component {
     render() {
         return (
             <DevMainContainer>
+
                 <DevSidebar />
                 <DevBody />
             </DevMainContainer>

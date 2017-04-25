@@ -7,9 +7,9 @@ var devbodyStyle = {
     width: '80%',
     height: '750px',
     backgroundColor: '#E9EBEE',
-    marginTop: "150px",
     color:"red",
-    marginLeft:"0",
+    marginTop: "4vw",
+    marginLeft:"20%",
     marginRight:"0",
     marginBottom:"0",
     position: "absolute",
@@ -19,10 +19,11 @@ var devbodyStyle = {
 
 const DevBody = (props) => (
     <div style={devbodyStyle}>
-        <DevBodyMainNav {...props}></DevBodyMainNav>
         <DevBodyWall {...props}></DevBodyWall>
     </div>
 )
 
 
 export default DevBody;
+
+// <DevBodyMainNav {...props}></DevBodyMainNav>

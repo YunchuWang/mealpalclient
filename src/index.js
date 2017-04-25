@@ -8,6 +8,7 @@ import DevSigninContainer from '../public/containers/DevSigninContainer.jsx';
 import DevSignUpContainer from '../public/containers/DevSignUpContainer.jsx';
 import DevForgotPasswordContainer from '../public/containers/DevForgotPasswordContainer.jsx';
 import MPprofile from '../public/components/profile/MPprofile';
+import MPRequestContainer from '../public/components/requestview/MPRequestContainer';
 import { Router, Route, hashHistory } from 'react-router';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from '../public/reducers/index';
@@ -48,6 +49,7 @@ ReactDOM.render((
                         <Route path="/DevMainPage" component={DevMainPage} />
                         <Route path="/DevMainContainer" component={DevMainContainer}>
                             <Route path="/MPprofile" component={MPprofile} />
+                            <Route path="/MPRequestContainer" component={MPRequestContainer} />
                         </Route>
                         <Route path="/DevSignup" component={DevSignup}>
                             <Route path="/DevSignUpContainer" component={DevSignUpContainer} />

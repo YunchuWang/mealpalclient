@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf944c59-ae1a-4ad0-8c8f-4dd697a255d9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevBody.jsx" afterPath="$PROJECT_DIR$/public/components/DevBody.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevBodyMainNav.jsx" afterPath="$PROJECT_DIR$/public/components/DevBodyMainNav.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevBodyWall.jsx" afterPath="$PROJECT_DIR$/public/components/DevBodyWall.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevMainPage.jsx" afterPath="$PROJECT_DIR$/public/components/DevMainPage.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/DevNavbar.jsx" afterPath="$PROJECT_DIR$/public/components/DevNavbar.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/containers/DevMainContainer.jsx" afterPath="$PROJECT_DIR$/public/containers/DevMainContainer.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/components/requestview/MPRequestContainer.jsx" afterPath="$PROJECT_DIR$/public/components/requestview/MPRequestContainer.jsx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,8 +40,8 @@
       <file leaf-file-name="MPRequestContainer.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/components/requestview/MPRequestContainer.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="57" column="64" lean-forward="false" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
+            <state relative-caret-position="525">
+              <caret line="58" column="35" lean-forward="false" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -1199,8 +1191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/components/requestview/MPRequestContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="57" column="64" lean-forward="false" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
+        <state relative-caret-position="525">
+          <caret line="58" column="35" lean-forward="false" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
           <folding />
         </state>
       </provider>

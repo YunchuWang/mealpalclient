@@ -18,6 +18,7 @@ class MPRequestContainer extends React.Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleActive = this.handleActive.bind(this);
+        // alert("hello")
     }
 
     handleChange = (value) => {
@@ -35,7 +36,7 @@ class MPRequestContainer extends React.Component {
             <Tabs
                 value={this.state.value}
                 onChange={this.handleChange} id="requesttab">
-                <Tab label="Tab A" value="a" className={"reqtab " + (this.state.value==="a"?"active":"inactive")} buttonStyle={{height: '3vw'}} onActive={this.handleActive}>
+                <Tab label="Request Groups" value="a" className={"reqtab " + (this.state.value==="a"?"active":"inactive")} buttonStyle={{height: '3vw'}} onActive={this.handleActive}>
                     <div>
                         <h2 style={styles.headline}>Controllable Tab A</h2>
                         <p>
@@ -45,7 +46,7 @@ class MPRequestContainer extends React.Component {
                         </p>
                     </div>
                 </Tab>
-                <Tab label="Tab B" value="b" className={"reqtab " + (this.state.value==="b"?"active":"inactive")} buttonStyle={{height: '3vw'}} onActive={this.handleActive}>
+                <Tab label="Active Requests" value="b" className={"reqtab " + (this.state.value==="b"?"active":"inactive")} buttonStyle={{height: '3vw'}} onActive={this.handleActive}>
                     <div>
                         <h2 style={styles.headline}>Controllable Tab B</h2>
                         <p>
@@ -55,7 +56,7 @@ class MPRequestContainer extends React.Component {
                         </p>
                     </div>
                 </Tab>
-                <Tab label="Tab C" value="c" className={"reqtab " + (this.state.value==="c"?"active":"inactive")} buttonStyle={{height: '3vw'}} onActive={this.handleActive}>
+                <Tab label="Archive" value="c" className={"reqtab " + (this.state.value==="c"?"active":"inactive")} buttonStyle={{height: '3vw'}} onActive={this.handleActive}>
                     <div>
                         <h2 style={styles.headline}>Controllable Tab C</h2>
                         <p>

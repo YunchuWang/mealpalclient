@@ -18,8 +18,8 @@ const DevBodyMainNav = (props) =>
                         <ContentInbox/><span>Write</span>
                     </button>
                     <button id="draft" type="button" className="heading-button" onClick={props.actions.showInbox}>
-                      <ContentDrafts/><span>Inbox</span></button>
-
+                      <ContentDrafts/><span>Inbox</span>
+                    </button>
                 </div>
             </div>
         </div>

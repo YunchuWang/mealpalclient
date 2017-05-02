@@ -1,18 +1,16 @@
 import React,{PropTypes} from 'react';
 import DevNavbar from '../components/DevNavbar.jsx';
-import DevSidebar from '../components/DevSidebar.jsx';
-import DevBody from '../components/DevBody.jsx';
 import '../css/style.css';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as Actions from '../actions'
 import axios from 'axios';
 import {apihost} from '../constants/global';
-// import Pusher from 'pusher';
 import Pusher from 'pusher-js';
 import {toastr} from 'react-redux-toastr';
+import DevModal from '../components/DevModal';
 var pusher, channel1,channel2,channel3;
-// var notify = false;
+
 class DevMainContainer extends React.Component {
     constructor(props){
         super(props);
@@ -92,6 +90,7 @@ class DevMainContainer extends React.Component {
         return (
             <div>
                 <DevNavbar {...this.props} handleLogout={this.logOut.bind(this)}/>
+                <DevModal {...this.props}/>
                 {childrenWithProps}
             </div>
 

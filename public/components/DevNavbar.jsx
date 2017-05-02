@@ -6,13 +6,13 @@ import '../css/bootstrap-theme.css';
 import '../css/bootstrap.css';
 import '../css/bootstrap.min.css';
 import HomeIcon from 'material-ui/svg-icons/action/home';
-import CommunicationStayCurrentPortraitIcon from 'material-ui/svg-icons/communication/stay-current-portrait';
 import axios from 'axios';
 import {apihost} from '../constants/global';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
 import profile from '../img/profile.jpg';
 import { goToAnchor } from 'react-scrollable-anchor';
 import ContentDrafts from 'material-ui/svg-icons/content/drafts';
+import ContentCreate from 'material-ui/svg-icons/content/create';
 
 const iconstyle = {
     height: "65%",
@@ -59,13 +59,16 @@ class DevNavbar extends React.Component {
                     <a href="#">
                       <span className="glyphicon glyphicon-cutlery
 appicon navlefticon"/>
-                        <span>
+                    <span>
                         MealPal
                     </span>
                     </a>
                 </div>
                 <div>
                     <span className="label label-success" />
+                </div>
+                <div className="navitem inboxicon">
+                    <ContentCreate style={iconstyle} color="white" className="inboxiconstyle" viewBox="0 -2 28 28" onClick={()=> {this.props.actions.showWriteRequest();}}/>
                 </div>
                 <div className="navitem homeicon">
                     <HomeIcon style={this.props.notify? homestyle: iconstyle} color="white" className="homeiconstyle" viewBox="0 -2 28 28" onClick={this.refresh}/>

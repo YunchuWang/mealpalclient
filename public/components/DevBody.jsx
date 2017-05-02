@@ -1,8 +1,6 @@
 import React from 'react';
-import DevBodyMainNav from './DevBodyMainNav.jsx';
-import DevBodySubNav from './DevBodySubNav.jsx';
 import DevBodyWall from './DevBodyWall.jsx';
-
+// import DevBodyMainNav from './DevBodyMainNav';
 var devbodyStyle = {
     width: '80%',
     height: '750px',

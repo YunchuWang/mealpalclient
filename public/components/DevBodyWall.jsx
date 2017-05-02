@@ -4,22 +4,14 @@ import "../css/style.css";
 import "../css/bootstrap-theme.css";
 import "../css/bootstrap-theme.min.css";
 import DevRequest from "./DevRequest.jsx";
-import DevModal from './DevModal'
+import DevModal from './DevModal';
 import axios from 'axios';
 import {apihost} from '../constants/global';
 import moment from 'moment';
 import {toastr} from 'react-redux-toastr';
 import InfiniteScroll from 'react-infinite-scroller';
-import ScrollableAnchor from 'react-scrollable-anchor'
-// var Scroll  = require('react-scroll');
-//
-// var Link       = Scroll.Link;
-// var Element    = Scroll.Element;
-// var Events     = Scroll.Events;
-// var scroll     = Scroll.animateScroll;
-// var scrollSpy  = Scroll.scrollSpy;
 
-var feedHeight;
+
 var concat = false;
 class DevBodyWall extends React.Component {
     constructor(props,context){
@@ -148,14 +140,9 @@ class DevBodyWall extends React.Component {
         }
         return (
 
-            <div className="requestwrapper" id="rinifi"  >
+            <div className="requestwrapper" id="rinifi" >
                 <InfiniteScroll className="DevBodyGrids" pageStart={0} loadMore={this.handleInfiniteLoad} hasMore={this.props.infinite.isInfiniteLoading} loader={<div className="loader">Loading ...</div>} useWindow={false} threshold={10}>
                     {DevReq}
-                    <DevModal dvalue={this.state.dvalue} date={this.state.date}
-                              time={this.state.time} lvalue={this.state.lvalue}
-                              showModal={this.props.showModal} onHide={this.close}
-                              onSubmit={this.addRequest} onDateChange={this.handleDate}
-                              onTimeChange={this.handleTime} onChange={this.handleChange}/>
                 </InfiniteScroll>
 
             </div>
